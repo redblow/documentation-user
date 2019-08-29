@@ -5,8 +5,16 @@ import re
 import urllib
 
 from docutils import nodes
-from sphinx import addnodes, util
+from sphinx import addnodes, util, builders
 from sphinx.locale import admonitionlabels
+
+from . import pycompat
+
+try:
+    from urllib import url2pathname
+except ImportError:
+    # P3
+    from urllib.request import url2pathname
 
 
 def _parents(node):
@@ -36,7 +44,12 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
     ]
 
-    def __init__(self, builder, document):
+    def __init__(self, document, builder):
+        # order of parameter swapped between Sphinx 1.x and 2.x, check if
+        # we're running 1.x and swap back
+        if not isinstance(builder, builders.Builder):
+            builder, document = document, builder
+
         super(BootstrapTranslator, self).__init__(document)
         self.builder = builder
         self.body = []
@@ -59,7 +72,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         self.param_separator = ','
 
     def encode(self, text):
-        return unicode(text).translate({
+        return pycompat.to_text(text).translate({
             ord('&'): u'&amp;',
             ord('<'): u'&lt;',
             ord('"'): u'&quot;',
@@ -68,12 +81,12 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         })
 
     def starttag(self, node, tagname, **attributes):
-        tagname = unicode(tagname).lower()
+        tagname = pycompat.to_text(tagname).lower()
 
         # extract generic attributes
-        attrs = {name.lower(): value for name, value in attributes.iteritems()}
+        attrs = {name.lower(): value for name, value in attributes.items()}
         attrs.update(
-            (name, value) for name, value in node.attributes.iteritems()
+            (name, value) for name, value in node.attributes.items()
             if name.startswith('data-')
         )
 
@@ -97,19 +110,19 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
             prefix=u''.join(prefix),
             tag=tagname,
             attrs=u' '.join(u'{}="{}"'.format(name, self.attval(value))
-                            for name,  value in attrs.iteritems()),
+                            for name,  value in attrs.items()),
             postfix=u''.join(postfix),
         )
     # only "space characters" SPACE, CHARACTER TABULATION, LINE FEED,
     # FORM FEED and CARRIAGE RETURN should be collapsed, not al White_Space
     def attval(self, value, whitespace=re.compile(u'[ \t\n\f\r]')):
-        return self.encode(whitespace.sub(u' ', unicode(value)))
+        return self.encode(whitespace.sub(u' ', pycompat.to_text(value)))
 
     def astext(self):
         return u''.join(self.body)
 
     def unknown_visit(self, node):
-        print "unknown node", node.__class__.__name__
+        print("unknown node", node.__class__.__name__)
         self.body.append(u'[UNKNOWN NODE {}]'.format(node.__class__.__name__))
         raise nodes.SkipNode
 
@@ -472,6 +485,20 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         self.body.append(self.starttag(node, 'a', **attrs))
     def depart_reference(self, node):
         self.body.append(u'</a>')
+    def visit_download_reference(self, node):
+        # type: (nodes.Node) -> None
+        if node.hasattr('filename'):
+            self.body.append(
+                '<a class="reference download internal" href="%s" download="">' %
+                posixpath.join(self.builder.dlpath, node['filename']))
+            self.body.append(node.astext())
+            self.body.append('</a>')
+            raise nodes.SkipNode
+        else:
+            self.context.append('')
+    def depart_download_reference(self, node):
+        # type: (nodes.Node) -> None
+        self.body.append(self.context.pop())
     def visit_target(self, node): pass
     def depart_target(self, node): pass
     def visit_footnote(self, node):
@@ -636,7 +663,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
                     banner = '_static/' + cover
                     base, ext = os.path.splitext(banner)
                     small = "{}.small{}".format(base, ext)
-                    if os.path.isfile(urllib.url2pathname(small)):
+                    if os.path.isfile(url2pathname(small)):
                         banner = small
                     style = u"background-image: url('{}')".format(
                         util.relative_uri(baseuri, banner) or '#')

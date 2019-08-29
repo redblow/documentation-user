@@ -1,16 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015-TODAY, Odoo S.A.
-# This file is distributed under the same license as the Odoo Business package.
+# This file is distributed under the same license as the Odoo package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# liAnGjiA <liangjia@qq.com>, 2017
+# Martin Trigaux, 2017
+# max_xu <wangzhanwh@163.com>, 2017
+# Jeffery CHEN Fan <jeffery9@gmail.com>, 2018
+# 洋 汪 <wonrence@163.com>, 2018
+# 黎伟杰 <674416404@qq.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Business 10.0\n"
+"Project-Id-Version: Odoo 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-20 11:50+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: liAnGjiA <liangjia@qq.com>, 2017\n"
+"POT-Creation-Date: 2018-07-27 11:08+0200\n"
+"PO-Revision-Date: 2017-10-20 09:56+0000\n"
+"Last-Translator: 黎伟杰 <674416404@qq.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,27 +30,157 @@ msgstr ""
 msgid "Online Database management"
 msgstr "在线数据库管理"
 
-#: ../../db_management/db_online.rst:13
-msgid "Duplicating a database"
-msgstr "复制数据库"
-
-#: ../../db_management/db_online.rst:15
+#: ../../db_management/db_online.rst:10
 msgid ""
-"Database duplication, renaming, custom DNS, etc. is not available to free "
-"customers of our Online platform."
-msgstr "我们平台上的免费用户没有权限进行数据库的复制,重命名,客户化DNS等操作."
+"To manage your databases, access the `database management page "
+"<https://www.odoo.com/my/databases>`__ (you will have to sign in). Then "
+"click on the `Manage Your Databases "
+"<https://www.odoo.com/my/databases/manage>`__ button."
+msgstr ""
 
 #: ../../db_management/db_online.rst:18
 msgid ""
-"Access the `database management page <https://www.odoo.com/my/databases>`__ "
-"(you will have to sign in). Next, make sure you are connected as the "
-"administrator of the database you want to duplicate. After that, click on "
-"the **Manage Your Databases** button."
+"Make sure you are connected as the administrator of the database you want to"
+" manage - many operations depends on indentifying you remotely to that "
+"database."
 msgstr ""
-"访问`数据库管理页面<https://www.odoo.com/my/databases>`__ (你必须先登入sign in). 下一步, "
-"在复制数据库前先确保你拥有管理员权限. 然后, 点击**管理你的数据库** 按钮."
 
-#: ../../db_management/db_online.rst:26
+#: ../../db_management/db_online.rst:22
+msgid "Several actions are available:"
+msgstr "有几种措施可供选择："
+
+#: ../../db_management/db_online.rst:28
+msgid ":ref:`Upgrade <upgrade_button>`"
+msgstr ":ref:`升级<upgrade_button>`"
+
+#: ../../db_management/db_online.rst:28
+msgid ""
+"Upgrade your database to the latest Odoo version to enjoy cutting-edge "
+"features"
+msgstr "将您的数据库升级到最新的Odoo版本，以享受最先进的功能"
+
+#: ../../db_management/db_online.rst:32
+msgid ":ref:`Duplicate <duplicate_online>`"
+msgstr ":ref:`复制<duplicate_online>`"
+
+#: ../../db_management/db_online.rst:31
+msgid ""
+"Make an exact copy of your database, if you want to try out new apps or new "
+"flows without compromising your daily operations"
+msgstr "如果你想在不影响日常操作的前提下试用新的应用程序或新的流程，就要制作一份数据库的精确副本"
+
+#: ../../db_management/db_online.rst:34
+msgid ":ref:`Rename <rename_online_database>`"
+msgstr ":ref:`重命名<rename_online_database>`"
+
+#: ../../db_management/db_online.rst:35
+msgid "Rename your database (and its URL)"
+msgstr "重命名数据库(及其URL)"
+
+#: ../../db_management/db_online.rst:37
+msgid "**Backup**"
+msgstr "**备份**"
+
+#: ../../db_management/db_online.rst:37
+msgid ""
+"Download an instant backup of your database; note that we back up databases "
+"daily according to our Odoo Cloud SLA"
+msgstr "下载数据库的即时备份；请注意，我们每天都根据我们的Odoo Cloud SLA备份数据库"
+
+#: ../../db_management/db_online.rst:40
+msgid ":ref:`Domains <custom_domain>`"
+msgstr ""
+
+#: ../../db_management/db_online.rst:40
+msgid "Configure custom domains to access your database via another URL"
+msgstr ""
+
+#: ../../db_management/db_online.rst:42
+msgid ":ref:`Delete <delete_online_database>`"
+msgstr ":ref:`删除<delete_online_database>`"
+
+#: ../../db_management/db_online.rst:43
+msgid "Delete a database instantly"
+msgstr "立即删除数据库"
+
+#: ../../db_management/db_online.rst:46
+msgid "Contact Support"
+msgstr "联系支持"
+
+#: ../../db_management/db_online.rst:45
+msgid ""
+"Access our `support page <https://www.odoo.com/help>`__ with the correct "
+"database already selected"
+msgstr "访问我们的`支持页面 <https://www.odoo.com/help>`__ 已选择正确的数据库"
+
+#: ../../db_management/db_online.rst:51
+msgid "Upgrade"
+msgstr "升级"
+
+#: ../../db_management/db_online.rst:53
+msgid ""
+"Make sure to be connected to the database you want to upgrade and access the"
+" database management page. On the line of the database you want to upgrade, "
+"click on the \"Upgrade\" button."
+msgstr "确保已连接到要升级的数据库并访问数据库管理页面。在要升级的数据库行上，单击“升级”按钮。"
+
+#: ../../db_management/db_online.rst:60
+msgid ""
+"You have the possibility to choose the target version of the upgrade. By "
+"default, we select the highest available version available for your "
+"database; if you were already in the process of testing a migration, we will"
+" automatically select the version you were already testing (even if we "
+"released a more recent version during your tests)."
+msgstr ""
+
+#: ../../db_management/db_online.rst:66
+msgid ""
+"By clicking on the \"Test upgrade\" button an upgrade request will be "
+"generated. If our automated system does not encounter any problem, you will "
+"receive a \"Test\" version of your upgraded database."
+msgstr ""
+
+#: ../../db_management/db_online.rst:73
+msgid ""
+"If our automatic system detect an issue during the creation of your test "
+"database, our dedicated team will have to work on it. You will be notified "
+"by email and the process will take up to 4 weeks."
+msgstr ""
+
+#: ../../db_management/db_online.rst:77
+msgid ""
+"You will have the possibility to test it for 1 month. Inspect your data "
+"(e.g. accounting reports, stock valuation, etc.), check that all your usual "
+"flows work correctly (CRM flow, Sales flow, etc.)."
+msgstr ""
+
+#: ../../db_management/db_online.rst:81
+msgid ""
+"Once you are ready and that everything is correct in your test migration, "
+"you can click again on the Upgrade button, and confirm by clicking on "
+"Upgrade (the button with the little rocket!) to switch your production "
+"database to the new version."
+msgstr ""
+
+#: ../../db_management/db_online.rst:89
+msgid ""
+"Your database will be taken offline during the upgrade (usually between "
+"30min up to several hours for big databases), so make sure to plan your "
+"migration during non-business hours."
+msgstr ""
+
+#: ../../db_management/db_online.rst:96
+msgid "Duplicating a database"
+msgstr "复制数据库"
+
+#: ../../db_management/db_online.rst:98
+msgid ""
+"Database duplication, renaming, custom DNS, etc. is not available for trial "
+"databases on our Online platform. Paid Databases and \"One App Free\" "
+"database can duplicate without problem."
+msgstr ""
+
+#: ../../db_management/db_online.rst:103
 msgid ""
 "In the line of the database you want to duplicate, you will have a few "
 "buttons. To duplicate your database, just click **Duplicate**. You will have"
@@ -50,42 +188,110 @@ msgid ""
 msgstr ""
 "在你想要复制数据库的那一行,你会发现几个按钮.请点击**Duplicate**复制你的数据库.在弹出的窗口中输入数据库副本名字,然后点击**Continue**."
 
-#: ../../db_management/db_online.rst:36
-msgid "A duplicated database has the same behaviour as a real one:"
-msgstr "数据库副本的执行内容和正式数据库一样:"
+#: ../../db_management/db_online.rst:110
+msgid ""
+"If you do not check the \"For testing purposes\" checkbox when duplicating a"
+" database, all external communication will remain active:"
+msgstr ""
 
-#: ../../db_management/db_online.rst:38
+#: ../../db_management/db_online.rst:113
 msgid "Emails are sent"
 msgstr "电子邮件已送出"
 
-#: ../../db_management/db_online.rst:40
-msgid "Payments are processed (in the e-commerce, for example)"
-msgstr "付款已处理（例如，电子商务）"
+#: ../../db_management/db_online.rst:115
+msgid ""
+"Payments are processed (in the e-commerce or Subscriptions apps, for "
+"example)"
+msgstr ""
 
-#: ../../db_management/db_online.rst:42
+#: ../../db_management/db_online.rst:118
 msgid "Delivery orders (shipping providers) are sent"
 msgstr "发运单据(承运人)已经发送"
 
-#: ../../db_management/db_online.rst:44
+#: ../../db_management/db_online.rst:120
 msgid "Etc."
 msgstr "等等."
 
-#: ../../db_management/db_online.rst:46
+#: ../../db_management/db_online.rst:122
 msgid ""
-"It is **strongly** advised to test behaviour using sample customers/products"
-" (with a `disposable e-mail <http://www.mailinator.com>`__ address, for "
-"example)"
-msgstr "强烈建议使用客户/产品等样本数据进行测试,邮件地址也建议使用`临时地址<http://www.mailinator.com>`."
+"Make sure to check the checkbox \"For testing purposes\" if you want these "
+"behaviours to be disabled."
+msgstr "如果要禁用这些行为，请务必选中“用于测试目的”复选框。"
 
-#: ../../db_management/db_online.rst:50
+#: ../../db_management/db_online.rst:125
 msgid ""
 "After a few seconds, you will be logged in your duplicated database. Notice "
 "that the url uses the name you chose for your duplicated database."
 msgstr "几秒钟之后你就可以登录数据库副本了.请注意你可以在浏览器地址栏里看到数据库副本的名字."
 
-#: ../../db_management/db_online.rst:54
+#: ../../db_management/db_online.rst:129
 msgid "Duplicate databases expire automatically after 15 days."
 msgstr "数据库副本将在15天后自动过期."
+
+#: ../../db_management/db_online.rst:137
+msgid "Rename a Database"
+msgstr "重命名数据库"
+
+#: ../../db_management/db_online.rst:139
+msgid ""
+"To rename your database, make sure you are connected to the database you "
+"want to rename, access the `database management page "
+"<https://www.odoo.com/my/databases>`__ and click **Rename**. You will have "
+"to give a new name to your database, then click **Rename Database**."
+msgstr ""
+
+#: ../../db_management/db_online.rst:150
+msgid "Deleting a Database"
+msgstr "删除数据库"
+
+#: ../../db_management/db_online.rst:152
+msgid "You can only delete databases of which you are the administrator."
+msgstr "您只能删除您是管理员的数据库。"
+
+#: ../../db_management/db_online.rst:154
+msgid ""
+"When you delete your database all the data will be permanently lost. The "
+"deletion is instant and for all the Users. We advise you to do an instant "
+"backup of your database before deleting it, since the last automated daily "
+"backup may be several hours old at that point."
+msgstr ""
+
+#: ../../db_management/db_online.rst:160
+msgid ""
+"From the `database management page <https://www.odoo.com/my/databases>`__, "
+"on the line of the database you want to delete, click on the \"Delete\" "
+"button."
+msgstr ""
+
+#: ../../db_management/db_online.rst:167
+msgid ""
+"Read carefully the warning message that will appear and proceed only if you "
+"fully understand the implications of deleting a database:"
+msgstr ""
+
+#: ../../db_management/db_online.rst:173
+msgid ""
+"After a few seconds, the database will be deleted and the page will reload "
+"automatically."
+msgstr ""
+
+#: ../../db_management/db_online.rst:177
+msgid ""
+"If you need to re-use this database name, it will be immediately available."
+msgstr ""
+
+#: ../../db_management/db_online.rst:179
+msgid ""
+"It is not possible to delete a database if it is expired or linked to a "
+"Subscription. In these cases contact `Odoo Support "
+"<https://www.odoo.com/help>`__"
+msgstr ""
+
+#: ../../db_management/db_online.rst:183
+msgid ""
+"If you want to delete your Account, please contact `Odoo Support "
+"<https://www.odoo.com/help>`__"
+msgstr ""
 
 #: ../../db_management/db_premise.rst:7
 msgid "On-premise Database management"
@@ -130,8 +336,8 @@ msgstr "你的企业订阅号码是有效的吗？"
 #: ../../db_management/db_premise.rst:35
 msgid ""
 "Check if your subscription details get the tag \"In Progress\" on your `Odoo"
-" Account <https://accounts.odoo.com/my/contract>`__ or with your Account "
-"Manager"
+" Account <https://accounts.odoo.com/my/subscription>`__ or with your Account"
+" Manager"
 msgstr ""
 
 #: ../../db_management/db_premise.rst:39
@@ -148,9 +354,9 @@ msgstr ""
 #: ../../db_management/db_premise.rst:45
 msgid ""
 "You can unlink the old database yourself on your `Odoo Contract "
-"<https://accounts.odoo.com/my/contract>`__ with the button \"Unlink "
+"<https://accounts.odoo.com/my/subscription>`__ with the button \"Unlink "
 "database\""
-msgstr "按\\Unlink database（取消数据库绑定）\\按钮可自行在Odoo合约（Odoo Contract）中取消旧数据的绑定。"
+msgstr ""
 
 #: ../../db_management/db_premise.rst:52
 msgid ""
@@ -173,10 +379,9 @@ msgstr "自2016年7月以后,Odoo9会自动修改数据库副本的UUID;手工�
 msgid ""
 "If it's not the case, you may have multiple databases sharing the same UUID."
 " Please check on your `Odoo Contract "
-"<https://accounts.odoo.com/my/contract>`__, a short message will appear "
+"<https://accounts.odoo.com/my/subscription>`__, a short message will appear "
 "specifying which database is problematic:"
 msgstr ""
-"如果不属于上述情形，可以用多个数据库共享同一个UUID。请在<https://accounts.odoo.com/my/contract>中勾选“Odoo合约”，然后会出现以下提示：请指出有问题的数据库"
 
 #: ../../db_management/db_premise.rst:73
 msgid ""
@@ -194,7 +399,7 @@ msgstr "为便于查找，我们用UUID辨别数据库，因此每个数据库�
 
 #: ../../db_management/db_premise.rst:82
 msgid "Error message due to too many users"
-msgstr ""
+msgstr "因用户过多而引发的错误信息"
 
 #: ../../db_management/db_premise.rst:84
 msgid ""
@@ -222,9 +427,9 @@ msgstr "或"
 msgid ""
 "**Deactivate users** as explained in this `Documentation "
 "<https://www.odoo.com "
-"/documentation/user/10.0/db_management/documentation.html#deactivating-"
+"/documentation/user/11.0/db_management/documentation.html#deactivating-"
 "users>`__ and **Reject** the upsell quotation."
-msgstr "按照文献要求**冻结用户**"
+msgstr ""
 
 #: ../../db_management/db_premise.rst:109
 msgid ""
@@ -327,6 +532,7 @@ msgid ""
 " change you can force a ping to speed up the verification, your production "
 "database will then be correctly identified."
 msgstr ""
+"您可能已经在不同的数据库上保存了相同的UUID，我们也从这些数据库接收到信息。因此，请阅读：参考文献<duplicate_premise>，了解如何更改UUID。在更改之后，您可以强制ping来加速验证，你的生产数据库将正确识别。"
 
 #: ../../db_management/db_premise.rst:174
 msgid "Duplicate a database"

@@ -1,4 +1,4 @@
-============================
+=./odoo.py --load=web,hw_proxy,hw_posbox_homepage,hw_posbox_upgrade,hw_scale,hw_scanner,hw_escpos===========================
 Point of Sale Hardware Setup
 ============================
 
@@ -16,14 +16,14 @@ You will need :
 * The POSBox
 * A 2A Power adapter
 * A computer or tablet with an up-to-date web browser
-* A running SaaS or Odoo instance with the Point of Sale installed
+* A running SaaS or Odoo database with the Point of Sale installed
 * A local network set up with DHCP (this is the default setting)
-* An RJ45 Ethernet Cable or a Linux compatible USB Wi-Fi adapter
 * An Epson USB TM-T20 Printer or another ESC/POS compatible printer
   (officially supported printers are listed at the `POS Hardware page
   <https://www.odoo.com/page/pos-ipad-android-hardware>`_)
 * A Honeywell Eclipse USB Barcode Scanner or another compatible scanner
 * An Epson compatible cash drawer
+* An RJ45 Ethernet Cable (optional, Wi-Fi is built in)
 
 Step By Step Setup Guide
 ------------------------
@@ -57,12 +57,10 @@ hardware might work as well.
   cable. Make sure this will connect the POSBox to the same network as
   your POS device.
 
-* **Wi-Fi**: If you do not wish to use Ethernet, plug in a Linux
-  compatible USB Wi-Fi adapter. Most commercially available Wi-Fi
-  adapters are Linux compatible. Officially supported are Wi-Fi
-  adapters with a Ralink 5370 chipset. Make sure not to plug in an
-  Ethernet cable, because all Wi-Fi functionality will be bypassed
-  when a wired network connection is available.
+* **Wi-Fi**: The current version of the POSBox has Wi-Fi built
+  in. Make sure not to plug in an Ethernet cable, because all Wi-Fi
+  functionality will be bypassed when a wired network connection is
+  available.
 
 Power the POSBox
 ~~~~~~~~~~~~~~~~
@@ -82,15 +80,15 @@ Setup the Point of Sale
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 To setup the POSBox in the Point of Sale go to :menuselection:`Point
-of Sale --> Configuration --> Settings` and select your Point of
-Sale. Scroll down to the ``Hardware Proxy / POSBox`` section and
+of Sale --> Configuration --> Point of Sale` and select your Point of
+Sale. Scroll down to the ``PoSBox / Hardware Proxy`` section and
 activate the options for the hardware you want to use through the
 POSBox. Specifying the IP of the POSBox is recommended (it is printed
 on the receipt that gets printed after booting up the POSBox). When
 the IP is not specified the Point of Sale will attempt to find it on
 the local network.
 
-If you are running multiple Point of Sales on the same POSBox, make sure
+If you are running multiple Point of Sale on the same POSBox, make sure
 that only one of them has Remote Scanning/Barcode Scanner activated.
 
 It might be a good idea to make sure the POSBox IP never changes in
@@ -110,10 +108,11 @@ should be ready to use.
 Wi-Fi configuration
 -------------------
 
-The POSBox is Wi-Fi-capable. In order to use it you'll need a Linux
-compatible USB Wi-Fi adapter. Most commercially available Wi-Fi
-adapters are Linux compatible. Officially supported are Wi-Fi adapters
-with a Ralink 5370 chipset.
+The most recent version of the POSBox has Wi-Fi built in. If you're
+using an older version you'll need a Linux compatible USB Wi-Fi
+adapter. Most commercially available Wi-Fi adapters are Linux
+compatible. Officially supported are Wi-Fi adapters with a Ralink 5370
+chipset.
 
 Make sure not to plug in an Ethernet cable, as all Wi-Fi related
 functionality will be disabled when a wired network connection is
@@ -177,9 +176,9 @@ Image building process
 ----------------------
 
 We generate the official POSBox images using the scripts in
-https://github.com/odoo/odoo/tree/8.0/addons/point_of_sale/tools/posbox. More
+https://github.com/odoo/odoo/tree/11.0/addons/point_of_sale/tools/posbox. More
 specifically, we run 
-`posbox_create_image.sh <https://github.com/odoo/odoo/blob/8.0/addons/point_of_sale/tools/posbox/posbox_create_image.sh>`_.
+`posbox_create_image.sh <https://github.com/odoo/odoo/blob/11.0/addons/point_of_sale/tools/posbox/posbox_create_image.sh>`_.
 This builds an image
 called ``posbox.img``, which we zip and upload to `nightly.odoo.com <https://nightly.odoo.com>`_
 for users to download.
@@ -206,7 +205,7 @@ Prerequisites
 -------------
 
 - A Debian-based Linux distribution (Debian, Ubuntu, Mint, etc.)
-- A running Odoo instance you connect to to load the Point of Sale
+- A running Odoo instance you connect to load the Point of Sale
 - You must uninstall any ESC/POS printer driver as it will conflict
   with Odoo's built-in driver
 
@@ -216,30 +215,26 @@ Step By Step Setup Guide
 Extra dependencies
 ~~~~~~~~~~~~~~~~~~
 
-Because Odoo runs on Python 2, you need to check which version of pip
+Because Odoo 11.0 runs on Python 3, you need to check which version of pip
 you need to use.
 
 ``# pip --version``
 
 If it returns something like::
 
-  pip 1.5.6 from /usr/local/lib/python3.3/dist-packages/pip-1.5.6-py3.3.egg (python 3.3)
+  pip 1.4.1 from /usr/lib/python2.7/dist-packages (python 2.7)
 
-You need to try pip2 instead.
+You need to try pip3 instead.
 
 If it returns something like::
 
-  pip 1.4.1 from /usr/lib/python2.7/dist-packages (python 2.7)
+  pip 1.5.6 from /usr/local/lib/python3.3/dist-packages/pip-1.5.6-py3.3.egg (python 3.3)
 
 You can use pip.
 
 The driver modules requires the installation of new python modules:
 
-``# pip install pyserial``
-
-``# pip install pyusb==1.0.0b1``
-
-``# pip install qrcode``
+``# pip install netifaces evdev pyusb==1.0.0b1``
 
 Access Rights
 ~~~~~~~~~~~~~
@@ -250,7 +245,7 @@ create a group that has access to USB devices
 
 ``# groupadd usbusers``
 
-Then we add the user who will run the OpenERP server to ``usbusers``
+Then we add the user who will run the Odoo server to ``usbusers``
 
 ``# usermod -a -G usbusers USERNAME``
 
@@ -262,14 +257,16 @@ following content::
     SUBSYSTEM=="usb", GROUP="usbusers", MODE="0660"
     SUBSYSTEMS=="usb", GROUP="usbusers", MODE="0660"
 
-Then you need to reboot your machine.
+Then you need to reload the udev rules or reboot your machine if reloading the rules did not work.
+
+``# udevadm control --reload-rules && udevadm trigger``
 
 Start the local Odoo instance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We must launch the Odoo server with the correct settings
 
-``$ ./odoo.py --load=web,hw_proxy,hw_posbox_homepage,hw_posbox_upgrade,hw_scale,hw_scanner,hw_escpos``
+``$ ./odoo-bin --load=web,hw_proxy,hw_posbox_homepage,hw_scale,hw_scanner,hw_escpos``
 
 Test the instance
 ~~~~~~~~~~~~~~~~~
@@ -330,7 +327,7 @@ hardware drivers are implemented as Odoo modules. Those modules are
 all prefixed with ``hw_*`` and they are the only modules that are
 running on the POSBox. Odoo is only used for the framework it
 provides. No business data is processed or stored on the POSBox. The
-Odoo instance is a shallow git clone of the ``8.0`` branch.
+Odoo instance is a shallow git clone of the ``11.0`` branch.
 
 The root partition on the POSBox is mounted read-only, ensuring that
 we don't wear out the SD card by writing to it too much. It also

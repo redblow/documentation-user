@@ -1,16 +1,50 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015-TODAY, Odoo S.A.
-# This file is distributed under the same license as the Odoo Business package.
+# This file is distributed under the same license as the Odoo package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# 卓忆科技 <zhanghao@jointd.com>, 2017
+# udcs <seanhwa@hotmail.com>, 2017
+# 訾明华 <565209960@qq.com>, 2017
+# liulixia <liu.lixia@elico-corp.com>, 2017
+# Gang LIU <liu9ang@hotmail.com>, 2017
+# 宣一敏 <freemanxuan@163.com>, 2017
+# Richard yang <yanglinqiangdata@hotmail.com>, 2017
+# 苏州远鼎 <tiexinliu@126.com>, 2017
+# zpq001 <zpq001@live.com>, 2017
+# mrshelly <mrshelly@hotmail.com>, 2017
+# Jeff Yu - Elico Corp <jeff.yu@elico-corp.com>, 2017
+# Joray <13637815@qq.com>, 2017
+# xiaobin wu <bd5dml@gmail.com>, 2017
+# Connie Xiao <connie.xiao@elico-corp.com>, 2017
+# zhining wu <wzn63@21cn.com>, 2017
+# fausthuang, 2017
+# 老窦 北京 <2662059195@qq.com>, 2017
+# Gary Wei <Gary.wei@elico-corp.com>, 2018
+# waveyeung <waveyeung@qq.com>, 2018
+# v2exerer <9010446@qq.com>, 2018
+# e2f <projects@e2f.com>, 2018
+# 菜小蛇 <lttlsnk@gmail.com>, 2018
+# John Lin <linyinhuan@139.com>, 2018
+# Martin Trigaux, 2018
+# ChinaMaker <liuct@chinamaker.net>, 2018
+# yuan wenpu <1140021222@qq.com>, 2018
+# Jeffery CHEN Fan <jeffery9@gmail.com>, 2018
+# liAnGjiA <liangjia@qq.com>, 2018
+# 广州救火 <7017511@qq.com>, 2018
+# neter ji <jifuyi@qq.com>, 2018
+# xu xiaohu <xu.xiaohu@gmail.com>, 2018
+# 演奏王 <wangwhai@qq.com>, 2018
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Business 10.0\n"
+"Project-Id-Version: Odoo 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-20 11:50+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: 苏州远鼎 <tiexinliu@126.com>, 2017\n"
+"POT-Creation-Date: 2018-11-07 15:44+0100\n"
+"PO-Revision-Date: 2017-10-20 09:55+0000\n"
+"Last-Translator: 演奏王 <wangwhai@qq.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +52,7 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../accounting.rst:5 ../../accounting/localizations/mexico.rst:268
+#: ../../accounting.rst:5 ../../accounting/localizations/mexico.rst:283
 msgid "Accounting"
 msgstr "会计"
 
@@ -27,6 +61,7 @@ msgid "Bank & Cash"
 msgstr "银行及现金"
 
 #: ../../accounting/bank/feeds.rst:3
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Bank Feeds"
 msgstr "银行回单"
 
@@ -86,14 +121,16 @@ msgstr ""
 #: ../../accounting/payables/supplier_bills/bills_or_receipts.rst:30
 #: ../../accounting/payables/supplier_bills/manage.rst:31
 #: ../../accounting/receivables/customer_invoices/cash_discounts.rst:15
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:19
 #: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:24
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:20
 #: ../../accounting/receivables/customer_invoices/payment_terms.rst:19
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:31
 #: ../../accounting/receivables/customer_payments/check.rst:39
 #: ../../accounting/receivables/customer_payments/check.rst:103
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:40
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:113
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:31
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:19
 msgid "Configuration"
 msgstr "配置"
 
@@ -214,7 +251,6 @@ msgstr "手工登记银行对账单"
 #: ../../accounting/bank/reconciliation/use_cases.rst:6
 #: ../../accounting/others/adviser/budget.rst:6
 #: ../../accounting/others/analytic/purchases_expenses.rst:6
-#: ../../accounting/others/multicurrencies.rst:3
 #: ../../accounting/others/multicurrencies/exchange.rst:6
 #: ../../accounting/others/multicurrencies/how_it_works.rst:6
 #: ../../accounting/others/multicurrencies/invoices_payments.rst:6
@@ -687,7 +723,91 @@ msgid ""
 "every 4 hours."
 msgstr "一旦你填写了你的凭证,你的银行订阅将会每4小时进行一次同步。"
 
-#: ../../accounting/bank/misc.rst:3
+#: ../../accounting/bank/feeds/synchronize.rst:73
+#: ../../accounting/localizations/mexico.rst:533
+msgid "FAQ"
+msgstr "常问问题"
+
+#: ../../accounting/bank/feeds/synchronize.rst:76
+msgid "The synchronization is not working in real time, is it normal?"
+msgstr "同步不能实时运行，这是正常的吗？"
+
+#: ../../accounting/bank/feeds/synchronize.rst:78
+msgid ""
+"Yodlee tries to get the data from a bank account once a day. However, this "
+"doesn't always happen at the same time. And sometimes the process can fail. "
+"In that case, Yodlee retries one hour or two later. This is why in Odoo "
+"there is a cron that is running every 4 hours to fetch the information from "
+"Yodlee."
+msgstr ""
+"Yodlee每天尝试从银行账户中获取数据一次。然而，这种情况并不总是同时发生的。有时候这个过程可能会失败。在这种情况下，Yodlee会在一两个小时后再试一次。这就是为什么在Odoo有一个cron每4小时运行一次，从Yodlee获取信息。"
+
+#: ../../accounting/bank/feeds/synchronize.rst:83
+msgid ""
+"You can however force this synchronization by clicking on the button "
+"\"Synchronize now\" from the accounting dashboard."
+msgstr "但是, 您可以通过单击按钮 \"立即同步 \" 从会计仪表板强制此同步。"
+
+#: ../../accounting/bank/feeds/synchronize.rst:86
+msgid ""
+"Moreover, a transaction can be visible in your bank account but not being "
+"fetched by Yodlee. Indeed, the transaction in your bank account can have the"
+" status \"pending\" and not the status \"posted\". In that case, Yodlee "
+"won't import it, you will have to wait that the status changes."
+msgstr ""
+"此外, 交易可以在您的银行帐户中可见, 但不能被 Yodlee 提取。实际上, 您的银行帐户中的交易记录可以具有状态 \"挂起 \", 而不是状态 "
+"\"已过帐 \"。在这种情况下, Yodlee 不会导入它, 您将不得不等待状态更改。"
+
+#: ../../accounting/bank/feeds/synchronize.rst:91
+msgid ""
+"What is important to remember is that Yodlee is not a service fetching "
+"transactions in real time. This is a service to facilitate the import of the"
+" bank statement in the database."
+msgstr "值得记住的是, Yodlee 不是实时获取事务的服务。这是一项有助于在数据库中导入银行对帐单的服务。"
+
+#: ../../accounting/bank/feeds/synchronize.rst:95
+msgid "Is the Yodlee feature included in my contract?"
+msgstr "我的合同中是否包含Yodlee功能？"
+
+#: ../../accounting/bank/feeds/synchronize.rst:97
+msgid ""
+"Enterprise Version: Yes, if you have a valid enterprise contract linked to "
+"your database."
+msgstr "企业版：是的，如果你有一个有效的企业合同链接到你的数据库。"
+
+#: ../../accounting/bank/feeds/synchronize.rst:98
+msgid ""
+"Community Version: No, this feature is not included in the Community "
+"Version."
+msgstr "社区版：不，该功能未包含在社区版本中。"
+
+#: ../../accounting/bank/feeds/synchronize.rst:99
+msgid ""
+"Online Version: Yes, even if you benefit from the One App Free contract."
+msgstr "在线版：是的，甚至您从One App Free合同中受益。"
+
+#: ../../accounting/bank/feeds/synchronize.rst:102
+msgid "Some banks have a status \"Beta\", what does it mean?"
+msgstr "一些银行是\"Beta\"状态，这是什么意思？"
+
+#: ../../accounting/bank/feeds/synchronize.rst:104
+msgid ""
+"This means that Yodlee is only currently working on developing the "
+"synchronization with this bank. The synchronization could already work or it"
+" may need a bit more time to have a 100% working synchronization. "
+"Unfortunately, there is not much to do about except being patient."
+msgstr ""
+"这意味着Yodlee目前只致力于开发与该银行的同步。同步可能已经开始工作，或者可能需要更多的时间来实现100%的工作同步。不幸的是，除了耐心之外，没有什么可做的。"
+
+#: ../../accounting/bank/feeds/synchronize.rst:110
+msgid "All my past transactions are not in Odoo, why?"
+msgstr "所有我的过去交易都不在Odoo，为什么？"
+
+#: ../../accounting/bank/feeds/synchronize.rst:112
+msgid "Yodlee only allows to fetch up transactions to 3 months in the past."
+msgstr "Yodlee只允许在过去3个月内完成交易。"
+
+#: ../../accounting/bank/misc.rst:3 ../../accounting/payables/misc.rst:3
 #: ../../accounting/payables/misc/employee_expense.rst:187
 msgid "Miscellaneous"
 msgstr "杂项"
@@ -1074,7 +1194,6 @@ msgstr ""
 #: ../../accounting/bank/reconciliation.rst:3
 #: ../../accounting/others/reporting/main_reports.rst:153
 #: ../../accounting/overview/main_concepts/memento.rst:177
-#: ../../accounting/overview/main_concepts/terminologies.rst:19
 msgid "Bank Reconciliation"
 msgstr "银行调节"
 
@@ -1213,7 +1332,7 @@ msgstr "登记发票不需要特殊设置。我们只需安装会计应用就可
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:29
 msgid "Use cases"
-msgstr ""
+msgstr "使用案例"
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:32
 msgid "Case 1: Payments registration"
@@ -1371,6 +1490,35 @@ msgid ""
 "the company on your user preferences in order to add, edit or delete bank "
 "accounts from another company."
 msgstr "如果你在多公司环境内工作, 如你添加、编辑或删除银行账号, 需要在首选项中切换公司。"
+
+#: ../../accounting/bank/setup/create_bank_account.rst:0
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+#: ../../accounting/others/configuration/account_type.rst:0
+msgid "Type"
+msgstr "类型"
+
+#: ../../accounting/bank/setup/create_bank_account.rst:0
+msgid ""
+"Bank account type: Normal or IBAN. Inferred from the bank account number."
+msgstr "银行账户类型：正常或IBAN。从银行账号推断。"
+
+#: ../../accounting/bank/setup/create_bank_account.rst:0
+msgid "ABA/Routing"
+msgstr "ABA/路由"
+
+#: ../../accounting/bank/setup/create_bank_account.rst:0
+msgid "American Bankers Association Routing Number"
+msgstr "美国银行家协会路由号码"
+
+#: ../../accounting/bank/setup/create_bank_account.rst:0
+msgid "Account Holder Name"
+msgstr "账户持有人名称"
+
+#: ../../accounting/bank/setup/create_bank_account.rst:0
+msgid ""
+"Account holder name, in case it is different than the name of the Account "
+"Holder"
+msgstr "帐户持有人姓名，不同于帐户持有人的名称"
 
 #: ../../accounting/bank/setup/create_bank_account.rst:49
 msgid "View *Bank Account* in our Online Demonstration"
@@ -1597,9 +1745,12 @@ msgid ""
 msgstr "在选项卡日记帐分录, 默认的借记卡和信用卡帐号可同时配置为期刊的货币"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-#: ../../accounting/others/configuration/account_type.rst:0
-msgid "Type"
-msgstr "类型"
+msgid "Active"
+msgstr "有效"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Set active to false to hide the Journal without removing it."
+msgstr "设置为无效，可以隐藏日记账而不用删除它。"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Select 'Sale' for customer invoices journals."
@@ -1620,6 +1771,16 @@ msgid "Select 'General' for miscellaneous operations journals."
 msgstr "在杂项业务日记账中选择‘通用’。"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Use in Point of Sale"
+msgstr "在销售点中使用"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid ""
+"Check this box if this journal define a payment method that can be used in a"
+" point of sale."
+msgstr "如果这个日记账中定义了能够在‘POS’用的付款方式就勾选这个选项"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Company"
 msgstr "公司"
 
@@ -1636,14 +1797,12 @@ msgid "The journal entries of this journal will be named using this prefix."
 msgstr "这个日记账中的日记账分录会被用这个前缀命名"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Dedicated Refund Sequence"
-msgstr "专用退款序列"
+msgid "Next Number"
+msgstr "下一号码"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"Check this box if you don't want to share the same sequence for invoices and"
-" refunds made from this journal"
-msgstr "如果你不想在此日记账中共用发票和退款的序列号, 请选择这个方框."
+msgid "The next sequence number will be used for the next invoice."
+msgstr "下一号码将用于下一张发票"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Entry Sequence"
@@ -1656,14 +1815,32 @@ msgid ""
 msgstr "这个字段包含和这个日记中日记账分录数量相关的信息"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Refund Entry Sequence"
+msgid "Dedicated Credit Note Sequence"
+msgstr "退款专用序列"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid ""
+"Check this box if you don't want to share the same sequence for invoices and"
+" credit notes made from this journal"
+msgstr "勾选此框，则此日记账下的会计发票或退款不使用同一个序列。"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Credit Notes: Next Number"
+msgstr "退款：下一号码"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "The next sequence number will be used for the next credit note."
+msgstr "下一号码将用于下一张退款单"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Credit Note Entry Sequence"
 msgstr "退款分录序列"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid ""
-"This field contains the information related to the numbering of the refund "
-"entries of this journal."
-msgstr "这个字段包含和这个日记账的退款分录的数量相关的信息"
+"This field contains the information related to the numbering of the credit "
+"note entries of this journal."
+msgstr "该字段包含此日记账中与信用清单目录数量相关的信息。"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Default Debit Account"
@@ -1683,43 +1860,75 @@ msgstr "它将充当贷方金额的默认科目"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Currency"
-msgstr "货币"
+msgstr "币种"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "The currency used to enter statement"
 msgstr "货币用来输入状态"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Debit Methods"
-msgstr "借记方式"
+msgid "Defines how the bank statements will be registered"
+msgstr "定义银行对账单的注册方式"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Creation of Bank Statements"
+msgstr "创建银行对账单"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Defines when a new bank statement"
+msgstr "定义新的银行对帐单的时间"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "will be created when fetching new transactions"
+msgstr "将在提取新交易时创建"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "from your bank account."
+msgstr "从你的银行账户。"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "For Incoming Payments"
+msgstr "为收款"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+#: ../../accounting/payables/pay/check.rst:0
+msgid "Manual: Get paid by cash, check or any other method outside of Odoo."
+msgstr "手动：通过现金，支票或Odoo以外的任何其他方式进行付款。"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+#: ../../accounting/payables/pay/check.rst:0
+msgid ""
+"Electronic: Get paid automatically through a payment acquirer by requesting "
+"a transaction on a card saved by the customer when buying or subscribing "
+"online (payment token)."
+msgstr "电子化：在购买或在线订购（付款标记）时，通过客户保存的卡上的交易的付款请求自动进行付款。"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid ""
-"Means of payment for collecting money. Odoo modules offer various payments "
-"handling facilities, but you can always use the 'Manual' payment method in "
-"order to manage payments outside of the software."
-msgstr "收钱的付款形式。Odoo模块提供各种各样的付款处理工具，但是你也可以一直在系统外用手工的付款方法管理付款"
+"Batch Deposit: Encase several customer checks at once by generating a batch "
+"deposit to submit to your bank. When encoding the bank statement in Odoo,you"
+" are suggested to reconcile the transaction with the batch deposit. Enable "
+"this option from the settings."
+msgstr ""
+"批量存款：通过生成一批存款，并提交给你的银行，将几个客户的支票同时包裹起来。在用Odoo编码银行结单时，建议您将交易与批量存款对账。从设置中启用此选项。"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Payment Methods"
-msgstr "付款方式"
+msgid "For Outgoing Payments"
+msgstr "为付款"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Manual:Pay bill by cash or any other method outside of Odoo."
+msgstr "手动：通过现金，支票或Odoo以外的任何其他方式进行付款。"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Check:Pay bill by check and print it from Odoo."
+msgstr "支票: 通过支票支付账单, 并从 Odoo 打印。"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid ""
-"Means of payment for sending money. Odoo modules offer various payments "
-"handling facilities, but you can always use the 'Manual' payment method in "
-"order to manage payments outside of the software."
-msgstr "付钱的付款形式。Odoo模块提供各种各样的付款处理工具，但是你也可以一直在系统外用手工的付款方法管理付款"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Group Invoice Lines"
-msgstr "分组发票明细行"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"If this box is checked, the system will try to group the accounting lines "
-"when generating them from invoices."
-msgstr "如果这个框已被检查,系统会集成行来生成发票。"
+"SEPA Credit Transfer: Pay bill from a SEPA Credit Transfer file you submit "
+"to your bank. Enable this option from the settings."
+msgstr "sepa 信用转移: 从您提交到您的银行的 SEPA 信用转移文件支付账单。从设置中启用此选项。"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Profit Account"
@@ -1742,12 +1951,33 @@ msgid ""
 msgstr "现金登记的期末余额与系统计算的有差异时候用来登记损失"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Show journal on dashboard"
-msgstr "在仪表板显示日记账"
+msgid "Group Invoice Lines"
+msgstr "分组发票明细行"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Whether this journal should be displayed on the dashboard or not"
-msgstr "不管这个日记账是否显示在仪表板"
+msgid ""
+"If this box is checked, the system will try to group the accounting lines "
+"when generating them from invoices."
+msgstr "如果这个框已被检查,系统会集成行来生成发票。"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Post At Bank Reconciliation"
+msgstr "银行对账时过账"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid ""
+"Whether or not the payments made in this journal should be generated in "
+"draft state, so that the related journal entries are only posted when "
+"performing bank reconciliation."
+msgstr "是否应在汇票状态下生成本日记账中的付款，以便仅在进行银行对账时才张贴相关的日记账分录。"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Alias Name for Vendor Bills"
+msgstr "供应商账单的别名"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "It creates draft vendor bill by sending an email."
+msgstr "通过发送邮件创建供应商账单."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Check Printing Payment Method Selected"
@@ -1784,16 +2014,6 @@ msgstr "下一个支票号码"
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Sequence number of the next printed check."
 msgstr "下个打印支票的序列编号"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Active in Point of Sale"
-msgstr "在POS中启用"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"Check this box if this journal define a payment method that can be used in a"
-" point of sale."
-msgstr "如果这个日记账中定义了能够在‘POS’用的付款方式就勾选这个选项"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Amount Authorized Difference"
@@ -1873,11 +2093,438 @@ msgstr "该交易将被添加到当前的现金支付登记。"
 
 #: ../../accounting/localizations.rst:3
 msgid "Localizations"
+msgstr "本地化"
+
+#: ../../accounting/localizations/france.rst:3
+msgid "France"
+msgstr "法国"
+
+#: ../../accounting/localizations/france.rst:6
+msgid "FEC"
+msgstr "FEC"
+
+#: ../../accounting/localizations/france.rst:8
+msgid ""
+"If you have installed the French Accounting, you will be able to download "
+"the FEC. For this, go in :menuselection:`Accounting --> Reporting --> France"
+" --> FEC`."
+msgstr "如果你已经安装了法国会计，你将能下载FEC。为此，可以这样：菜单选项“会计-->报表-->法国-->FEC”。"
+
+#: ../../accounting/localizations/france.rst:12
+msgid ""
+"If you do not see the submenu **FEC**, go in **Apps** and search for the "
+"module called **France-FEC** and verify if it is well installed."
+msgstr "如果您看不到子菜单 **, 请进入 ** 应用程序 ** 并搜索名为 ** 法国-FEC ** 的模块, 并验证它是否安装良好。"
+
+#: ../../accounting/localizations/france.rst:16
+msgid "French Accounting Reports"
+msgstr "法国会计报告"
+
+#: ../../accounting/localizations/france.rst:18
+msgid ""
+"If you have installed the French Accounting, you will have access to some "
+"accounting reports specific to France:"
+msgstr "如果您安装了法国会计, 您将可以访问特定于法国的一些会计报告:"
+
+#: ../../accounting/localizations/france.rst:20
+msgid "Bilan comptable"
+msgstr "会计余额"
+
+#: ../../accounting/localizations/france.rst:21
+msgid "Compte de résultats"
+msgstr "结果帐户"
+
+#: ../../accounting/localizations/france.rst:22
+msgid "Plan de Taxes France"
+msgstr "法国税收计划"
+
+#: ../../accounting/localizations/france.rst:25
+msgid "Get the VAT anti-fraud certification with Odoo"
+msgstr "通过 Odoo 获得增值税反欺诈认证"
+
+#: ../../accounting/localizations/france.rst:27
+msgid ""
+"As of January 1st 2018, a new anti-fraud legislation comes into effect in "
+"France and DOM-TOM. This new legislation stipulates certain criteria "
+"concerning the inalterability, security, storage and archiving of sales "
+"data. These legal requirements are implemented in Odoo, version 9 onward, "
+"through a module and a certificate of conformity to download."
+msgstr ""
+"截至 2018年1月1日, 法国和 DOM-TOM 实施了一项新的反欺诈立法。这一新立法规定了有关销售数据的 "
+"inalterability、安全、存储和归档的某些标准。这些法律要求在 Odoo 中实施, 版本9继续, 通过模块和合格证书下载。"
+
+#: ../../accounting/localizations/france.rst:34
+msgid "Is my company required to use an anti-fraud software?"
+msgstr "我的公司是否需要使用反欺诈软件？"
+
+#: ../../accounting/localizations/france.rst:36
+msgid ""
+"Your company is required to use an anti-fraud cash register software like "
+"Odoo (CGI art. 286, I. 3° bis) if:"
+msgstr "您的公司需要使用一个反欺诈现金登记软件, 如 Odoo (CGI 艺术 286, i. 3° bis) 如果:"
+
+#: ../../accounting/localizations/france.rst:39
+msgid "You are taxable (not VAT exempt) in France or any DOM-TOM,"
+msgstr "您在法国或任何 DOM-汤姆应纳税 (不含增值税),"
+
+#: ../../accounting/localizations/france.rst:40
+msgid "Some of your customers are private individuals (B2C)."
+msgstr "您的一些客户是个人 (B2C)。"
+
+#: ../../accounting/localizations/france.rst:42
+msgid ""
+"This rule applies to any company size. Auto-entrepreneurs are exempted from "
+"VAT and therefore are not affected."
+msgstr "此规则适用于任何公司规模。自动创业者免征增值税, 因此不受影响。"
+
+#: ../../accounting/localizations/france.rst:46
+msgid "Get certified with Odoo"
+msgstr "获得 Odoo 认证"
+
+#: ../../accounting/localizations/france.rst:48
+msgid "Getting compliant with Odoo is very easy."
+msgstr "与 Odoo 的兼容是非常容易的。"
+
+#: ../../accounting/localizations/france.rst:50
+msgid ""
+"Your company is requested by the tax administration to deliver a certificate"
+" of conformity testifying that your software complies with the anti-fraud "
+"legislation. This certificate is granted by Odoo SA to Odoo Enterprise users"
+" `here <https://www.odoo.com/my/contract/french-certification/>`__. If you "
+"use Odoo Community, you should `upgrade to Odoo Enterprise "
+"<https://www.odoo.com/documentation/online/setup/enterprise.html>`__ or "
+"contact your Odoo service provider."
+msgstr ""
+"税务管理部门要求贵公司提供合格证书, 证明您的软件符合反欺诈法规。此证书由 odoo SA 授予 odoo 企业用户 \" "
+"<https://www.odoo.com/my/contract/french-certification/>`__.。如果您使用 odoo 社区, "
+"您应该 \"升级到 odoo "
+"企业版<https://www.odoo.com/documentation/online/setup/enterprise.html>\" __ "
+"或联系您的 odoo 服务提供商."
+
+#: ../../accounting/localizations/france.rst:58
+msgid "In case of non-conformity, your company risks a fine of €7,500."
+msgstr "如果不符合规定, 您的公司将面临7500欧元的罚款。"
+
+#: ../../accounting/localizations/france.rst:60
+msgid "To get the certification just follow the following steps:"
+msgstr "要获得认证, 只需按照以下步骤操作:"
+
+#: ../../accounting/localizations/france.rst:62
+msgid ""
+"Install the anti-fraud module fitting your Odoo environment from the *Apps* "
+"menu:"
+msgstr "从 * 应用程序 * 菜单中安装适合您 Odoo 环境的反欺诈模块:"
+
+#: ../../accounting/localizations/france.rst:65
+msgid ""
+"if you use Odoo Point of Sale: *l10n_fr_pos_cert*: France - VAT Anti-Fraud "
+"Certification for Point of Sale (CGI 286 I-3 bis)"
+msgstr ""
+"如果您使用 Odoo 销售点: * l10n_fr_pos_cert *: 法国-销售点的增值税反欺诈认证 (CGI 286 I-3 bis)"
+
+#: ../../accounting/localizations/france.rst:67
+msgid ""
+"in any other case: *l10n_fr_certification*: France - VAT Anti-Fraud "
+"Certification (CGI 286 I-3 bis)"
+msgstr "在任何其他情况下: * l10n_fr_certification *: 法国-增值税反欺诈认证 (CGI 286 I-3 bis)"
+
+#: ../../accounting/localizations/france.rst:68
+msgid ""
+"Make sure a country is set on your company, otherwise your entries won’t be "
+"encrypted for the inalterability check. To edit your company’s data, go to "
+":menuselection:`Settings --> Users & Companies --> Companies`. Select a "
+"country from the list; Do not create a new country."
+msgstr ""
+"确保您的公司设置了一个国家/地区, 否则您的条目将不会被加密 inalterability 检查。要编辑您公司的数据, 请转到: "
+"menuselection: \"设置->> 用户和公司->> 公司\"。从列表中选择一个国家/地区;不要创建一个新的国家。"
+
+#: ../../accounting/localizations/france.rst:72
+msgid ""
+"Download the mandatory certificate of conformity delivered by Odoo SA `here "
+"<https://www.odoo.com/my/contract/french-certification/>`__."
+msgstr ""
+"下载 Odoo SA ' 这里 ' 提供的强制性合格证书<https://www.odoo.com/my/contract/french-"
+"certification/>`__."
+
+#: ../../accounting/localizations/france.rst:74
+msgid ""
+"To install the module in any system created before December 18th 2017, you "
+"should update the modules list. To do so, activate the developer mode from "
+"the *Settings* menu. Then go to the *Apps* menu and press *Update Modules "
+"List* in the top-menu."
+msgstr ""
+"要在2017年12月18日之前创建的任何系统中安装该模块, 应更新 \"模块\" 列表。为此, 请从 * 设置 * 菜单中激活开发人员模式。然后转到 *"
+" 应用程序 * 菜单, 然后在顶部菜单中按 * 更新模块列表 *。"
+
+#: ../../accounting/localizations/france.rst:78
+msgid ""
+"In case you run Odoo on-premise, you need to update your installation and "
+"restart your server beforehand."
+msgstr "如果您在本地运行 Odoo, 您需要更新您的安装并提前重新启动服务器。"
+
+#: ../../accounting/localizations/france.rst:80
+msgid ""
+"If you have installed the initial version of the anti-fraud module (prior to"
+" December 18th 2017), you need to update it. The module's name was *France -"
+" Accounting - Certified CGI 286 I-3 bis*. After an update of the modules "
+"list, search for the updated module in *Apps*, select it and click "
+"*Upgrade*. Finally, make sure the following module *l10n_fr_sale_closing* is"
+" installed."
+msgstr ""
+"如果您安装了反欺诈模块的初始版本 (2017年12月18日之前), 则需要对其进行更新。该模块的名称是 * 法国-会计认证 CGI 286 I-3 "
+"bis *。更新模块列表后, 在 * 应用程序 * 中搜索更新的模块 *, 选择它, 然后单击 * 升级 *。最后, 确保安装了以下模块 * "
+"l10n_fr_sale_closing *。"
+
+#: ../../accounting/localizations/france.rst:89
+msgid "Anti-fraud features"
+msgstr "反欺诈功能"
+
+#: ../../accounting/localizations/france.rst:91
+msgid "The anti-fraud module introduces the following features:"
+msgstr "反欺诈模块引入了以下功能:"
+
+#: ../../accounting/localizations/france.rst:93
+msgid ""
+"**Inalterability**: deactivation of all the ways to cancel or modify key "
+"data of POS orders, invoices and journal entries;"
+msgstr "**Inalterability**: 取消或修改 POS 订单、发票和日记帐分录的关键数据的所有方式的停用;"
+
+#: ../../accounting/localizations/france.rst:95
+msgid "**Security**: chaining algorithm to verify the inalterability;"
+msgstr "**Security**: 链算法验证 inalterability;"
+
+#: ../../accounting/localizations/france.rst:96
+msgid ""
+"**Storage**: automatic sales closings with computation of both period and "
+"cumulative totals (daily, monthly, annually)."
+msgstr "**Storage**: 自动销售结转, 计算期间和累计合计 (每日、每月、每年)。"
+
+#: ../../accounting/localizations/france.rst:100
+msgid "Inalterability"
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:102
+msgid ""
+"All the possible ways to cancel and modify key data of paid POS orders, "
+"confirmed invoices and journal entries are deactivated, if the company is "
+"located in France or in any DOM-TOM."
+msgstr "如果公司位于法国或任何 DOM-TOM, 则取消和修改付费 POS 订单、已确认发票和日记帐分录的关键数据的所有可能方法都将被停用。"
+
+#: ../../accounting/localizations/france.rst:106
+msgid ""
+"If you run a multi-companies environment, only the documents of such "
+"companies are impacted."
+msgstr "如果您运行的是多公司环境, 则只有这些公司的文档受到影响。"
+
+#: ../../accounting/localizations/france.rst:110
+msgid "Security"
+msgstr "安全"
+
+#: ../../accounting/localizations/france.rst:112
+msgid ""
+"To ensure the inalterability, every order or journal entry is encrypted upon"
+" validation. This number (or hash) is calculated from the key data of the "
+"document as well as from the hash of the precedent documents."
+msgstr ""
+"为确保 inalterability, 每个订单或日记帐条目在验证时进行加密。此数字 (或哈希) 是从文档的关键数据以及先例文档的哈希计算得出的。"
+
+#: ../../accounting/localizations/france.rst:117
+msgid ""
+"The module introduces an interface to test the data inalterability. If any "
+"information is modified on a document after its validation, the test will "
+"fail. The algorithm recomputes all the hashes and compares them against the "
+"initial ones. In case of failure, the system points out the first corrupted "
+"document recorded in the system."
+msgstr ""
+"该模块引入一个接口来测试数据 inalterability。如果文档在验证后修改了任何信息, 则测试将失败。算法重新计算所有哈希值, "
+"并将它们与初始值进行比较。在出现故障时, 系统会指出系统中记录的第一个损坏的文档。"
+
+#: ../../accounting/localizations/france.rst:123
+msgid ""
+"Users with *Manager* access rights can launch the inalterability check. For "
+"POS orders, go to :menuselection:`Point of Sales --> Reporting --> French "
+"Statements`. For invoices or journal entries, go to "
+":menuselection:`Invoicing/Accounting --> Reporting --> French Statements`."
+msgstr ""
+"具有 * 管理员 * 访问权限的用户可以启动 inalterability 检查。对于 POS 订单, 请转到: menuselection: "
+"\"销售点->> 报告-法国声明\"。对于发票或日记帐分录, 请转到: menuselection: \"开票/记帐->> 报告-法国声明\"。"
+
+#: ../../accounting/localizations/france.rst:130
+msgid "Storage"
+msgstr "存储"
+
+#: ../../accounting/localizations/france.rst:132
+msgid ""
+"The system also processes automatic sales closings on a daily, monthly and "
+"annual basis. Such closings distinctly compute the sales total of the period"
+" as well as the cumulative grand totals from the very first sales entry "
+"recorded in the system."
+msgstr "该系统还处理每日、每月和每年的自动销售结转。此类结算会显著计算该期间的销售总额以及系统中记录的第一个销售条目的累计总计。"
+
+#: ../../accounting/localizations/france.rst:138
+msgid ""
+"Closings can be found in the *French Statements* menu of Point of Sale, "
+"Invoicing and Accounting apps."
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:142
+msgid ""
+"Closings compute the totals for journal entries of sales journals (Journal "
+"Type = Sales)."
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:144
+msgid ""
+"For multi-companies environments, such closings are performed by company."
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:146
+msgid ""
+"POS orders are posted as journal entries at the closing of the POS session. "
+"Closing a POS session can be done anytime. To prompt users to do it on a "
+"daily basis, the module prevents from resuming a session opened more than 24"
+" hours ago. Such a session must be closed before selling again."
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:152
+msgid ""
+"A period’s total is computed from all the journal entries posted after the "
+"previous closing of the same type, regardless of their posting date. If you "
+"record a new sales transaction for a period already closed, it will be "
+"counted in the very next closing."
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:157
+msgid ""
+"For test & audit purposes such closings can be manually generated in the "
+"developer mode. Go to :menuselection:`Settings --> Technical --> Automation "
+"--> Scheduled Actions` to do so."
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:164
+msgid "Responsibilities"
+msgstr "责任"
+
+#: ../../accounting/localizations/france.rst:166
+msgid ""
+"Do not uninstall the module! If you do so, the hashes will be reset and none"
+" of your past data will be longer guaranteed as being inalterable."
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:169
+msgid ""
+"Users remain responsible for their Odoo instance and must use it with due "
+"diligence. It is not permitted to modify the source code which guarantees "
+"the inalterability of data."
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:173
+msgid ""
+"Odoo absolves itself of all and any responsibility in case of changes in the"
+" module’s functions caused by 3rd party applications not certified by Odoo."
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:178
+msgid "More Information"
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:180
+msgid ""
+"You will find more information about this legislation in the official "
+"documents:"
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:182
+msgid ""
+"`Frequently Asked Questions "
+"<https://www.economie.gouv.fr/files/files/directions_services/dgfip/controle_fiscal/actualites_reponses/logiciels_de_caisse.pdf>`__"
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:183
+msgid ""
+"`Official Statement "
+"<http://bofip.impots.gouv.fr/bofip/10691-PGP.html?identifiant=BOI-TVA-"
+"DECLA-30-10-30-20160803>`__"
+msgstr ""
+
+#: ../../accounting/localizations/france.rst:184
+msgid ""
+"`Item 88 of Finance Law 2016 "
+"<https://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000031732968&categorieLien=id&cidTexte=JORFTEXT000031732865>`__"
+msgstr ""
+
+#: ../../accounting/localizations/germany.rst:3
+msgid "Germany"
+msgstr "德国"
+
+#: ../../accounting/localizations/germany.rst:6
+msgid "German Chart of Accounts"
+msgstr ""
+
+#: ../../accounting/localizations/germany.rst:8
+msgid ""
+"The chart of accounts SKR03 and SKR04 are both supported in Odoo. You can "
+"choose the one you want by going in :menuselection:`Accounting --> "
+"Configuration` then choose the package you want in the Fiscal Localization "
+"section."
+msgstr ""
+
+#: ../../accounting/localizations/germany.rst:12
+#: ../../accounting/localizations/spain.rst:17
+msgid ""
+"Be careful, you can only change the accounting package as long as you have "
+"not created any accounting entry."
+msgstr ""
+
+#: ../../accounting/localizations/germany.rst:16
+msgid ""
+"When you create a new SaaS database, the SKR03 is installed by default."
+msgstr ""
+
+#: ../../accounting/localizations/germany.rst:19
+msgid "German Accounting Reports"
+msgstr ""
+
+#: ../../accounting/localizations/germany.rst:21
+msgid ""
+"Here is the list of German-specific reports available on Odoo Enterprise:"
+msgstr ""
+
+#: ../../accounting/localizations/germany.rst:23
+#: ../../accounting/localizations/spain.rst:27
+#: ../../accounting/others/reporting/main_reports.rst:30
+msgid "Balance Sheet"
+msgstr "资产负债表"
+
+#: ../../accounting/localizations/germany.rst:24
+#: ../../accounting/localizations/nederlands.rst:19
+msgid "Profit & Loss"
+msgstr ""
+
+#: ../../accounting/localizations/germany.rst:25
+msgid "Tax Report (Umsatzsteuervoranmeldung)"
+msgstr ""
+
+#: ../../accounting/localizations/germany.rst:26
+msgid "Partner VAT Intra"
+msgstr "合作伙伴增值税内"
+
+#: ../../accounting/localizations/germany.rst:29
+msgid "Export from Odoo to Datev"
+msgstr "导出从Odoo到Datev"
+
+#: ../../accounting/localizations/germany.rst:31
+msgid ""
+"It is possible to export your accounting entries from Odoo to Datev. To be "
+"able to use this feature, the german accounting localization needs to be "
+"installed on your Odoo Enterprise database. Then you can go in "
+":menuselection:`Accounting --> Reporting --> General Ledger` then click on "
+"the **Export Datev (csv)** button."
 msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:3
-msgid "Mexico Localization"
-msgstr ""
+msgid "Mexico"
+msgstr "墨西哥"
 
 #: ../../accounting/localizations/mexico.rst:6
 msgid ""
@@ -1950,7 +2597,7 @@ msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:54
 msgid "2. Electronic Invoices (CDFI 3.2 and 3.3 format)"
-msgstr ""
+msgstr "2. 电子发票(CDFI 3.2 和 3.3 格式)"
 
 #: ../../accounting/localizations/mexico.rst:56
 msgid ""
@@ -1961,11 +2608,11 @@ msgid ""
 " integrate with the normal invoicing flow in Odoo."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:66
+#: ../../accounting/localizations/mexico.rst:68
 msgid "3. Set you legal information in the company"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:68
+#: ../../accounting/localizations/mexico.rst:70
 msgid ""
 "First, make sure that your company is configured with the correct data. Go "
 "in :menuselection:`Settings --> Users --> Companies` and enter a valid "
@@ -1973,20 +2620,20 @@ msgid ""
 "position on your company’s contact."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:75
+#: ../../accounting/localizations/mexico.rst:77
 msgid ""
 "If you want use the Mexican localization on test mode, you can put any known"
 " address inside Mexico with all fields for the company address and set the "
-"vat to **ACO560518KW7**."
+"vat to **TCM970625MB1**."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:83
+#: ../../accounting/localizations/mexico.rst:85
 msgid ""
 "4. Set the proper \"Fiscal Position\" on the partner that represent the "
 "company"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:85
+#: ../../accounting/localizations/mexico.rst:87
 msgid ""
 "Go In the same form where you are editing the company save the record in "
 "order to set this form as a readonly and on readonly view click on the "
@@ -1996,11 +2643,11 @@ msgid ""
 "the option)."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:92
+#: ../../accounting/localizations/mexico.rst:94
 msgid "5. Enabling CFDI Version 3.3"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:95
+#: ../../accounting/localizations/mexico.rst:97
 msgid ""
 "This steps are only necessary when you will enable the CFDI 3.3 (only "
 "available for V11.0 and above) if you do not have Version 11.0 or above on "
@@ -2008,11 +2655,11 @@ msgid ""
 "https://www.odoo.com/help."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:100
+#: ../../accounting/localizations/mexico.rst:102
 msgid "Enable debug mode:"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:105
+#: ../../accounting/localizations/mexico.rst:107
 msgid ""
 "Go and look the following technical parameter, on :menuselection:`Settings "
 "--> Technical --> Parameters --> System Parameters` and set the parameter "
@@ -2020,7 +2667,7 @@ msgid ""
 "name does not exist)."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:111
+#: ../../accounting/localizations/mexico.rst:113
 msgid ""
 "The CFDI 3.2 will be legally possible until November 30th 2017 enable the "
 "3.3 version will be a mandatory step to comply with the new `SAT "
@@ -2028,36 +2675,36 @@ msgid ""
 "the default behavior."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:120
+#: ../../accounting/localizations/mexico.rst:122
 msgid "Important considerations when yo enable the CFDI 3.3"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:122
-#: ../../accounting/localizations/mexico.rst:581
+#: ../../accounting/localizations/mexico.rst:124
+#: ../../accounting/localizations/mexico.rst:613
 msgid ""
 "Your tax which represent the VAT 16% and 0% must have the \"Factor Type\" "
 "field set to \"Tasa\"."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:130
+#: ../../accounting/localizations/mexico.rst:132
 msgid ""
 "You must go to the Fiscal Position configuration and set the proper code (it"
 " is the first 3 numbers in the name) for example for the test one you should"
 " set 601, it will look like the image."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:137
+#: ../../accounting/localizations/mexico.rst:139
 msgid ""
 "All products must have for CFDI 3.3 the \"SAT code\" and the field "
 "\"Reference\" properly set, you can export them and re import them to do it "
 "faster."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:144
+#: ../../accounting/localizations/mexico.rst:146
 msgid "6. Configure the PAC in order to sign properly the invoices"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:146
+#: ../../accounting/localizations/mexico.rst:148
 msgid ""
 "To configure the EDI with the **PACs**, you can go in "
 ":menuselection:`Accounting --> Settings --> Electronic Invoicing (MX)`. You "
@@ -2065,14 +2712,14 @@ msgid ""
 "and then enter your PAC username and PAC password."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:152
+#: ../../accounting/localizations/mexico.rst:154
 msgid ""
 "Remember you must sign up in the refereed PAC before hand, that process can "
 "be done with the PAC itself on this case we will have two (2) availables "
 "`Finkok`_ and `Solución Factible`_."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:156
+#: ../../accounting/localizations/mexico.rst:158
 msgid ""
 "You must process your **Private Key (CSD)** with the SAT institution before "
 "follow this steps, if you do not have such information please try all the "
@@ -2081,146 +2728,163 @@ msgid ""
 "environment with real transactions."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:166
+#: ../../accounting/localizations/mexico.rst:168
 msgid ""
 "If you ticked the box *MX PAC test environment* there is no need to enter a "
 "PAC username or password."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:173
+#: ../../accounting/localizations/mexico.rst:175
 msgid ""
 "Here is a SAT certificate you can use if you want to use the *Test "
 "Environment* for the Mexican Accounting Localization."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:176
+#: ../../accounting/localizations/mexico.rst:178
 msgid "`Certificate`_"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:177
+#: ../../accounting/localizations/mexico.rst:179
 msgid "`Certificate Key`_"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:178
+#: ../../accounting/localizations/mexico.rst:180
 msgid "**Password :** 12345678a"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:181
-msgid "Usage and testing"
+#: ../../accounting/localizations/mexico.rst:183
+msgid "7. Configure the tag in sales taxes"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:184
+#: ../../accounting/localizations/mexico.rst:185
+msgid ""
+"This tag is used to set the tax type code, transferred or withhold, "
+"applicable to the concept in the CFDI. So, if the tax is a sale tax the "
+"\"Tag\" field should be \"IVA\", \"ISR\" or \"IEPS\"."
+msgstr ""
+
+#: ../../accounting/localizations/mexico.rst:192
+msgid ""
+"Note that the default taxes already has a tag assigned, but when you create "
+"a new tax you should choose a tag."
+msgstr ""
+
+#: ../../accounting/localizations/mexico.rst:196
+msgid "Usage and testing"
+msgstr "用法和测试"
+
+#: ../../accounting/localizations/mexico.rst:199
 msgid "Invoicing"
 msgstr "开票"
 
-#: ../../accounting/localizations/mexico.rst:186
+#: ../../accounting/localizations/mexico.rst:201
 msgid ""
 "To use the mexican invoicing you just need to do a normal invoice following "
 "the normal Odoo's behaviour."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:189
+#: ../../accounting/localizations/mexico.rst:204
 msgid ""
 "Once you validate your first invoice a correctly signed invoice should look "
 "like this:"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:196
+#: ../../accounting/localizations/mexico.rst:211
 msgid ""
 "You can generate the PDF just clicking on the Print button on the invoice or"
 " sending it by email following the normal process on odoo to send your "
 "invoice by email."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:203
+#: ../../accounting/localizations/mexico.rst:218
 msgid ""
 "Once you send the electronic invoice by email this is the way it should "
 "looks like."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:210
+#: ../../accounting/localizations/mexico.rst:225
 msgid "Cancelling invoices"
-msgstr ""
+msgstr "取消的发票"
 
-#: ../../accounting/localizations/mexico.rst:212
+#: ../../accounting/localizations/mexico.rst:227
 msgid ""
 "The cancellation process is completely linked to the normal cancellation in "
 "Odoo."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:214
+#: ../../accounting/localizations/mexico.rst:229
 msgid "If the invoice is not paid."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:216
+#: ../../accounting/localizations/mexico.rst:231
 msgid "Go to to the customer invoice journal where the invoice belong to"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:224
+#: ../../accounting/localizations/mexico.rst:239
 msgid "Check the \"Allow cancelling entries\" field"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:229
+#: ../../accounting/localizations/mexico.rst:244
 msgid "Go back to your invoice and click on the button \"Cancel Invoice\""
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:234
+#: ../../accounting/localizations/mexico.rst:249
 msgid ""
 "For security reasons it is recommendable return the check on the to allow "
 "cancelling to false again, then go to the journal and un check such field."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:237
+#: ../../accounting/localizations/mexico.rst:252
 msgid "**Legal considerations**"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:239
+#: ../../accounting/localizations/mexico.rst:254
 msgid "A cancelled invoice will automatically cancelled on the SAT."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:240
+#: ../../accounting/localizations/mexico.rst:255
 msgid ""
 "If you retry to use the same invoice after cancelled, you will have as much "
 "cancelled CFDI as you tried, then all those xml are important to maintain a "
 "good control of the cancellation reasons."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:243
+#: ../../accounting/localizations/mexico.rst:258
 msgid ""
 "You must unlink all related payment done to an invoice on odoo before cancel"
 " such document, this payments must be cancelled to following the same "
 "approach but setting the \"Allow Cancel Entries\" in the payment itself."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:248
+#: ../../accounting/localizations/mexico.rst:263
 msgid "Payments (Just available for CFDI 3.3)"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:250
+#: ../../accounting/localizations/mexico.rst:265
 msgid ""
 "To generate the payment complement you just must to follow the normal "
 "payment process in Odoo, this considerations to understand the behavior are "
 "important."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:253
+#: ../../accounting/localizations/mexico.rst:268
 msgid ""
 "All payment done in the same day of the invoice will be considered as It "
 "will not be signed, because It is the expected behavior legally required for"
 " \"Cash payment\"."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:256
+#: ../../accounting/localizations/mexico.rst:271
 msgid ""
 "To test a regular signed payment just create an invoice for the day before "
 "today and then pay it today."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:258
+#: ../../accounting/localizations/mexico.rst:273
 msgid "You must print the payment in order to retrieve the PDF properly."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:259
+#: ../../accounting/localizations/mexico.rst:274
 msgid ""
 "Regarding the \"Payments in Advance\" you must create a proper invoice with "
 "the payment in advance itself as a product line setting the proper SAT code "
@@ -2229,66 +2893,66 @@ msgid ""
 "caso de anticipos recibidos**."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:264
+#: ../../accounting/localizations/mexico.rst:279
 msgid ""
 "Related to topic 4 it is blocked the possibility to create a Customer "
 "Payment without a proper invoice."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:269
+#: ../../accounting/localizations/mexico.rst:284
 msgid "The accounting for Mexico in odoo is composed by 3 reports:"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:271
+#: ../../accounting/localizations/mexico.rst:286
 msgid "Chart of Account (Called and shown as COA)."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:272
+#: ../../accounting/localizations/mexico.rst:287
 msgid "Electronic Trial Balance."
-msgstr ""
+msgstr "电算试平衡。"
 
-#: ../../accounting/localizations/mexico.rst:273
+#: ../../accounting/localizations/mexico.rst:288
 msgid "DIOT report."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:275
+#: ../../accounting/localizations/mexico.rst:290
 msgid ""
 "1 and 2 are considered as the electronic accounting, and the DIOT is a "
 "report only available on the context of the accounting."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:278
+#: ../../accounting/localizations/mexico.rst:293
 msgid ""
 "You can find all those reports in the original report menu on Accounting "
 "app."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:284
+#: ../../accounting/localizations/mexico.rst:299
 msgid "Electronic Accounting (Requires Accounting App)"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:287
+#: ../../accounting/localizations/mexico.rst:302
 msgid "Electronic Chart of account CoA"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:289
+#: ../../accounting/localizations/mexico.rst:304
 msgid ""
 "The electronic accounting never has been easier, just go to "
 ":menuselection:`Accounting --> Reporting --> Mexico --> COA` and click on "
 "the button **Export for SAT (XML)**"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:296
+#: ../../accounting/localizations/mexico.rst:311
 msgid "**How to add new accounts?**"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:298
+#: ../../accounting/localizations/mexico.rst:313
 msgid ""
 "If you add an account with the coding convention NNN.YY.ZZ where NNN.YY is a"
 " SAT coding group then your account will be automatically configured."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:301
+#: ../../accounting/localizations/mexico.rst:316
 msgid ""
 "Example to add an Account for a new Bank account go to "
 ":menuselection:`Accounting --> Settings --> Chart of Account` and then "
@@ -2298,17 +2962,17 @@ msgid ""
 " xml."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:311
+#: ../../accounting/localizations/mexico.rst:326
 msgid "**What is the meaning of the tag?**"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:313
+#: ../../accounting/localizations/mexico.rst:328
 msgid ""
 "To know all possible tags you can read the `Anexo 24`_ in the SAT website on"
 " the section called **Código agrupador de cuentas del SAT**."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:317
+#: ../../accounting/localizations/mexico.rst:332
 msgid ""
 "When you install the module l10n_mx and yous Chart of Account rely on it "
 "(this happen automatically when you install setting Mexico as country on "
@@ -2316,11 +2980,11 @@ msgid ""
 "is not created you can create one on the fly."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:323
+#: ../../accounting/localizations/mexico.rst:338
 msgid "Electronic Trial Balance"
-msgstr ""
+msgstr "电算试平衡"
 
-#: ../../accounting/localizations/mexico.rst:325
+#: ../../accounting/localizations/mexico.rst:340
 msgid ""
 "Exactly as the COA but with Initial balance debit and credit, once you have "
 "your coa properly set you can go to :menuselection:`Accounting --> Reports "
@@ -2329,28 +2993,28 @@ msgid ""
 "the previous selection of the period you want to export."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:334
+#: ../../accounting/localizations/mexico.rst:349
 msgid ""
 "All the normal auditory and analysis features are available here also as any"
 " regular Odoo Report."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:338
+#: ../../accounting/localizations/mexico.rst:353
 msgid "DIOT Report (Requires Accounting App)"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:340
+#: ../../accounting/localizations/mexico.rst:355
 msgid "**What is the DIOT and the importance of presenting it SAT**"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:342
+#: ../../accounting/localizations/mexico.rst:357
 msgid ""
 "When it comes to procedures with the SAT Administration Service we know that"
 " we should not neglect what we present. So that things should not happen in "
 "Odoo."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:345
+#: ../../accounting/localizations/mexico.rst:360
 msgid ""
 "The DIOT is the Informational Statement of Operations with Third Parties "
 "(DIOT), which is an an additional obligation with the VAT, where we must "
@@ -2358,25 +3022,25 @@ msgid ""
 "the same, with our providers."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:350
+#: ../../accounting/localizations/mexico.rst:365
 msgid ""
 "This applies both to individuals and to the moral as well, so if we have VAT"
 " for submitting to the SAT and also dealing with suppliers it is necessary "
 "to. submit the DIOT:"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:354
+#: ../../accounting/localizations/mexico.rst:369
 msgid "**When to file the DIOT and in what format?**"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:356
+#: ../../accounting/localizations/mexico.rst:371
 msgid ""
 "It is simple to present the DIOT, since like all format this you can obtain "
 "it in the page of the SAT, it is the electronic format A-29 that you can "
 "find in the SAT website."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:360
+#: ../../accounting/localizations/mexico.rst:375
 msgid ""
 "Every month if you have operations with third parties it is necessary to "
 "present the DIOT, just as we do with VAT, so that if in January we have "
@@ -2384,24 +3048,24 @@ msgid ""
 "to said data."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:365
+#: ../../accounting/localizations/mexico.rst:380
 msgid "**Where the DIOT is presented?**"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:367
+#: ../../accounting/localizations/mexico.rst:382
 msgid ""
 "You can present DIOT in different ways, it is up to you which one you will "
 "choose and which will be more comfortable for you than you will present "
 "every month or every time you have dealings with suppliers."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:371
+#: ../../accounting/localizations/mexico.rst:386
 msgid ""
 "The A-29 format is electronic so you can present it on the SAT page, but "
 "this after having made up to 500 records."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:374
+#: ../../accounting/localizations/mexico.rst:389
 msgid ""
 "Once these 500 records are entered in the SAT, you must present them to the "
 "Local Taxpayer Services Administration (ALSC) with correspondence to your "
@@ -2410,18 +3074,18 @@ msgid ""
 "that you will still have these records and of course, your CD or USB."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:380
+#: ../../accounting/localizations/mexico.rst:395
 msgid "**One more fact to know: the Batch load?**"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:382
+#: ../../accounting/localizations/mexico.rst:397
 msgid ""
 "When reviewing the official SAT documents on DIOT, you will find the Batch "
 "load, and of course the first thing we think is what is that ?, and "
 "according to the SAT site is:"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:386
+#: ../../accounting/localizations/mexico.rst:401
 msgid ""
 "The \"batch upload\" is the conversion of records databases of transactions "
 "with suppliers made by taxpayers in text files (.txt). These files have the "
@@ -2431,7 +3095,7 @@ msgid ""
 "integration for the presentation in time and form to the SAT."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:393
+#: ../../accounting/localizations/mexico.rst:408
 msgid ""
 "You can use it to present the DIOT, since it is allowed, which will make "
 "this operation easier for you, so that it does not exist to avoid being in "
@@ -2439,41 +3103,41 @@ msgid ""
 "Third Parties."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:398
+#: ../../accounting/localizations/mexico.rst:413
 msgid "You can find the `official information here`_."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:400
+#: ../../accounting/localizations/mexico.rst:415
 msgid "**How Generate this report in odoo?**"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:402
+#: ../../accounting/localizations/mexico.rst:417
 msgid ""
 "Go to  :menuselection:`Accounting --> Reports --> Mexico --> Transactions "
 "with third partied (DIOT)`."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:407
+#: ../../accounting/localizations/mexico.rst:422
 msgid ""
 "A report view is shown, select last month to report the immediate before "
 "month you are or left the current month if it suits to you."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:413
+#: ../../accounting/localizations/mexico.rst:428
 msgid "Click on \"Export (TXT)."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:418
+#: ../../accounting/localizations/mexico.rst:433
 msgid ""
 "Save in a secure place the downloaded file and go to SAT website and follow "
 "the necessary steps to declare it."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:422
+#: ../../accounting/localizations/mexico.rst:437
 msgid "Important considerations on your Supplier and Invice data for the DIOT"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:424
+#: ../../accounting/localizations/mexico.rst:439
 msgid ""
 "All suppliers must have set the fields on the accounting tab called \"DIOT "
 "Information\", the *L10N Mx Nationality* field is filled with just select "
@@ -2482,34 +3146,34 @@ msgid ""
 " suppliers."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:432
+#: ../../accounting/localizations/mexico.rst:447
 msgid ""
 "There are 3 options of VAT for this report, 16%, 0% and exempt, an invoice "
 "line in odoo is considered exempt if no tax on it, the other 2 taxes are "
 "properly configured already."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:435
+#: ../../accounting/localizations/mexico.rst:450
 msgid ""
 "Remember to pay an invoice which represent a payment in advance you must ask"
 " for the invoice first and then pay it and reconcile properly the payment "
 "following standard odoo procedure."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:438
+#: ../../accounting/localizations/mexico.rst:453
 msgid ""
 "You do not need all you data on partners filled to try to generate the "
 "supplier invoice, you can fix this information when you generate the report "
 "itself."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:441
+#: ../../accounting/localizations/mexico.rst:456
 msgid ""
 "Remember this report only shows the Supplier Invoices that were actually "
 "paid."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:443
+#: ../../accounting/localizations/mexico.rst:458
 msgid ""
 "If some of this considerations are not taken into account a message like "
 "this will appear when generate the DIOT on TXT with all the partners you "
@@ -2519,26 +3183,26 @@ msgid ""
 "your partners are correctly set."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:454
+#: ../../accounting/localizations/mexico.rst:469
 msgid "Extra Recommended features"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:457
+#: ../../accounting/localizations/mexico.rst:472
 msgid "Contact Module (Free)"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:459
+#: ../../accounting/localizations/mexico.rst:474
 msgid ""
 "If you want to administer properly your customers, suppliers and addresses "
 "this module even if it is not a technical need, it is highly recommended to "
 "install."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:464
+#: ../../accounting/localizations/mexico.rst:479
 msgid "Multi currency (Requires Accounting App)"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:466
+#: ../../accounting/localizations/mexico.rst:481
 msgid ""
 "In Mexico almost all companies send and receive payments in different "
 "currencies if you want to manage such capability you should enable the multi"
@@ -2548,17 +3212,17 @@ msgid ""
 "information daily in the system manually."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:473
+#: ../../accounting/localizations/mexico.rst:488
 msgid "Go to settings and enable the multi currency feature."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:479
+#: ../../accounting/localizations/mexico.rst:494
 msgid ""
 "Enabling Explicit errors on the CFDI using the XSD local validator (CFDI "
 "3.3)"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:481
+#: ../../accounting/localizations/mexico.rst:496
 msgid ""
 "Frequently you want receive explicit errors from the fields incorrectly set "
 "on the xml, those errors are better informed to the user if the check is "
@@ -2566,49 +3230,72 @@ msgid ""
 "debug mode enabled)."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:486
+#: ../../accounting/localizations/mexico.rst:501
 msgid ""
 "Go to :menuselection:`Settings --> Technical --> Actions --> Server Actions`"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:487
+#: ../../accounting/localizations/mexico.rst:502
 msgid "Look for the Action called \"Download XSD files to CFDI\""
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:488
+#: ../../accounting/localizations/mexico.rst:503
 msgid "Click on button \"Create Contextual Action\""
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:489
+#: ../../accounting/localizations/mexico.rst:504
 msgid ""
 "Go to the company form :menuselection:`Settings --> Users&Companies --> "
 "Companies`"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:490
+#: ../../accounting/localizations/mexico.rst:505
 msgid "Open any company you have."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:491
-msgid "Click on \"Action\" and then on \"Dowload XSD file to CFDI\"."
+#: ../../accounting/localizations/mexico.rst:506
+#: ../../accounting/localizations/mexico.rst:529
+msgid "Click on \"Action\" and then on \"Download XSD file to CFDI\"."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:496
+#: ../../accounting/localizations/mexico.rst:511
 msgid ""
 "Now you can make an invoice with any error (for example a product without "
 "code which is pretty common) and an explicit error will be shown instead a "
 "generic one with no explanation."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:501
-msgid "FAQ"
+#: ../../accounting/localizations/mexico.rst:516
+msgid "If you see an error like this:"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:503
+#: ../../accounting/localizations/mexico.rst:518
+msgid "The cfdi generated is not valid"
+msgstr ""
+
+#: ../../accounting/localizations/mexico.rst:520
+msgid ""
+"attribute decl. 'TipoRelacion', attribute 'type': The QName value "
+"'{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoRelacion' does "
+"not resolve to a(n) simple type definition., line 36"
+msgstr ""
+
+#: ../../accounting/localizations/mexico.rst:524
+msgid ""
+"This can be caused because of a database backup restored in anothe server, "
+"or when the XSD files are not correctly downloaded. Follow the same steps as"
+" above but:"
+msgstr ""
+
+#: ../../accounting/localizations/mexico.rst:528
+msgid "Go to the company in which the error occurs."
+msgstr ""
+
+#: ../../accounting/localizations/mexico.rst:535
 msgid "**Error message** (Only applicable on CFDI 3.3):"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:505
+#: ../../accounting/localizations/mexico.rst:537
 msgid ""
 ":9:0:ERROR:SCHEMASV:SCHEMAV_CVC_MINLENGTH_VALID: Element "
 "'{http://www.sat.gob.mx/cfd/3}Concepto', attribute 'NoIdentificacion': "
@@ -2616,43 +3303,43 @@ msgid ""
 "allowed minimum length of '1'."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:507
+#: ../../accounting/localizations/mexico.rst:539
 msgid ""
 ":9:0:ERROR:SCHEMASV:SCHEMAV_CVC_PATTERN_VALID: Element "
 "'{http://www.sat.gob.mx/cfd/3}Concepto', attribute 'NoIdentificacion': "
 "[facet 'pattern'] The value '' is not accepted by the pattern '[^|]{1,100}'."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:510
+#: ../../accounting/localizations/mexico.rst:542
 msgid ""
 "**Solution:** You forget to set the proper \"Reference\" field in the "
 "product, please go to the product form and set your internal reference "
 "properly."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:513
-#: ../../accounting/localizations/mexico.rst:538
-#: ../../accounting/localizations/mexico.rst:548
-#: ../../accounting/localizations/mexico.rst:561
-#: ../../accounting/localizations/mexico.rst:572
+#: ../../accounting/localizations/mexico.rst:545
+#: ../../accounting/localizations/mexico.rst:570
+#: ../../accounting/localizations/mexico.rst:580
+#: ../../accounting/localizations/mexico.rst:593
+#: ../../accounting/localizations/mexico.rst:604
 msgid "**Error message**:"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:515
+#: ../../accounting/localizations/mexico.rst:547
 msgid ""
 ":6:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element "
 "'{http://www.sat.gob.mx/cfd/3}RegimenFiscal': The attribute 'Regimen' is "
 "required but missing."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:517
+#: ../../accounting/localizations/mexico.rst:549
 msgid ""
 ":5:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element "
 "'{http://www.sat.gob.mx/cfd/3}Emisor': The attribute 'RegimenFiscal' is "
 "required but missing."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:520
+#: ../../accounting/localizations/mexico.rst:552
 msgid ""
 "**Solution:** You forget to set the proper \"Fiscal Position\" on the "
 "partner of the company, go to customers, remove the customer filter and look"
@@ -2662,20 +3349,20 @@ msgid ""
 "considerations about fiscal positions."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:527
+#: ../../accounting/localizations/mexico.rst:559
 msgid ""
 "Yo must go to the Fiscal Position configuration and set the proper code (it "
 "is the first 3 numbers in the name) for example for the test one you should "
 "set 601, it will look like the image."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:535
+#: ../../accounting/localizations/mexico.rst:567
 msgid ""
 "For testing purposes this value must be *601 - General de Ley Personas "
 "Morales* which is the one required for the demo VAT."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:540
+#: ../../accounting/localizations/mexico.rst:572
 msgid ""
 ":2:0:ERROR:SCHEMASV:SCHEMAV_CVC_ENUMERATION_VALID: Element "
 "'{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'FormaPago': [facet "
@@ -2684,11 +3371,11 @@ msgid ""
 "'26', '27', '28', '29', '30', '99'}"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:543
+#: ../../accounting/localizations/mexico.rst:575
 msgid "**Solution:** The payment method is required on your invoice."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:550
+#: ../../accounting/localizations/mexico.rst:582
 msgid ""
 ":2:0:ERROR:SCHEMASV:SCHEMAV_CVC_ENUMERATION_VALID: Element "
 "'{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'LugarExpedicion': "
@@ -2702,16 +3389,16 @@ msgid ""
 "missing."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:555
+#: ../../accounting/localizations/mexico.rst:587
 msgid ""
 "**Solution:** You must set the address on your company properly, this is a "
 "mandatory group of fields, you can go to your company configuration on "
 ":menuselection:`Settings --> Users & Companies --> Companies` and fill all "
-"the required fields for your address following the step `3. Set you legal "
-"information in the company`."
+"the required fields for your address following the step :ref:`mx-legal-"
+"info`."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:563
+#: ../../accounting/localizations/mexico.rst:595
 msgid ""
 ":2:0:ERROR:SCHEMASV:SCHEMAV_CVC_DATATYPE_VALID_1_2_1: Element "
 "'{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'LugarExpedicion': '' "
@@ -2719,13 +3406,13 @@ msgid ""
 "'{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_CodigoPostal'."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:566
+#: ../../accounting/localizations/mexico.rst:598
 msgid ""
 "**Solution:** The postal code on your company address is not a valid one for"
 " Mexico, fix it."
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:574
+#: ../../accounting/localizations/mexico.rst:606
 msgid ""
 ":18:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element "
 "'{http://www.sat.gob.mx/cfd/3}Traslado': The attribute 'TipoFactor' is "
@@ -2734,15 +3421,111 @@ msgid ""
 "is required but missing.\", '')"
 msgstr ""
 
-#: ../../accounting/localizations/mexico.rst:578
+#: ../../accounting/localizations/mexico.rst:610
 msgid ""
 "**Solution:** Set the mexican name for the tax 0% and 16% in your system and"
 " used on the invoice."
 msgstr ""
 
-#: ../../accounting/localizations/switzerland.rst:3
-msgid "Switzerland Accounting Localization"
+#: ../../accounting/localizations/nederlands.rst:2
+msgid "Netherlands"
+msgstr "荷兰"
+
+#: ../../accounting/localizations/nederlands.rst:5
+msgid "XAF Export"
 msgstr ""
+
+#: ../../accounting/localizations/nederlands.rst:7
+msgid ""
+"With the Dutch accounting localization installed, you will be able to export"
+" all your accounting entries in XAF format. For this, you have to go in "
+":menuselection:`Accounting --> Reporting --> General Ledger`, you define the"
+" entries you want to export using the filters (period, journals, ...) and "
+"then you click on the button **EXPORT (XAF)**."
+msgstr ""
+
+#: ../../accounting/localizations/nederlands.rst:14
+msgid "Dutch Accounting Reports"
+msgstr ""
+
+#: ../../accounting/localizations/nederlands.rst:16
+msgid ""
+"If you install the Dutch accounting localization, you will have access to "
+"some reports that are specific to the Netherlands such as :"
+msgstr ""
+
+#: ../../accounting/localizations/nederlands.rst:21
+msgid "Tax Report (Aangifte omzetbelasting)"
+msgstr ""
+
+#: ../../accounting/localizations/nederlands.rst:23
+msgid "Intrastat Report (ICP)"
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:3
+msgid "Spain"
+msgstr "西班牙"
+
+#: ../../accounting/localizations/spain.rst:6
+msgid "Spanish Chart of Accounts"
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:8
+msgid ""
+"In Odoo, there are several Spanish Chart of Accounts that are available by "
+"default:"
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:10
+msgid "PGCE PYMEs 2008"
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:11
+msgid "PGCE Completo 2008"
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:12
+msgid "PGCE Entitades"
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:14
+msgid ""
+"You can choose the one you want by going in :menuselection:`Accounting --> "
+"Configuration` then choose the package you want in the **Fiscal "
+"Localization** section."
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:20
+msgid ""
+"When you create a new SaaS database, the PGCE PYMEs 2008 is installed by "
+"default."
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:23
+msgid "Spanish Accounting Reports"
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:25
+msgid ""
+"If the Spanish Accounting Localization is installed, you will have access to"
+" accounting reports specific to Spain:"
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:28
+msgid "Tax Report (Modelo 111)"
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:29
+msgid "Tax Report (Modelo 115)"
+msgstr ""
+
+#: ../../accounting/localizations/spain.rst:30
+msgid "Tax Report (Modelo 303)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:3
+msgid "Switzerland"
+msgstr "瑞士"
 
 #: ../../accounting/localizations/switzerland.rst:6
 msgid "ISR (In-payment Slip with Reference number)"
@@ -2785,6 +3568,294 @@ msgid ""
 "Administration from Switzerland. For this, go in :menuselection:`Accounting "
 "--> Settings`, activate the multi-currencies setting and choose the service "
 "you want."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:49
+msgid "Updated VAT for January 2018"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:51
+msgid ""
+"Starting from the 1st January 2018, new reduced VAT rates will be applied in"
+" Switzerland. The normal 8.0% rate will switch to 7.7% and the specific rate"
+" for the hotel sector will switch from 3.8% to 3.7%."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:56
+msgid "How to update your taxes in Odoo Enterprise (SaaS or On Premise)?"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:58
+msgid ""
+"If you have the V11.1 version, all the work is already been done, you don't "
+"have to do anything."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:61
+msgid ""
+"If you have started on an earlier version, you first have to update the "
+"module \"Switzerland - Accounting Reports\". For this, you go in "
+":menuselection:`Apps --> remove the filter \"Apps\" --> search for "
+"\"Switzerland - Accounting Reports\" --> open the module --> click on "
+"\"upgrade\"`."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:68
+msgid ""
+"Once it has been done, you can work on creating new taxes for the updated "
+"rates."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:72
+msgid ""
+"**Do not suppress or modify the existing taxes** (8.0% and 3.8%). You want "
+"to keep them since you may have to use both rates for a short period of "
+"time. Instead, remember to archive them once you have encoded all your 2017 "
+"transactions."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:77
+msgid "The creation of such taxes should be done in the following manner:"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:79
+msgid ""
+"**Purchase taxes**: copy the origin tax, change its name, label on invoice, "
+"rate and tax group (effective from v10 only)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:82
+msgid ""
+"**Sale taxes**: copy the origin tax, change its name, label on invoice, rate"
+" and tax group (effective from v10 only). Since the vat report now shows the"
+" details for old and new rates, you should also set the tags accordingly to"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:87
+msgid ""
+"For 7.7% taxes: Switzerland VAT Form: grid 302 base, Switzerland VAT Form: "
+"grid 302 tax"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:90
+msgid ""
+"For 3.7% taxes: Switzerland VAT Form: grid 342 base, Switzerland VAT Form: "
+"grid 342 tax"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:93
+msgid ""
+"You'll find below, as examples, the correct configuration for all taxes "
+"included in Odoo by default"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Tax Name**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Rate**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Label on Invoice**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Tax Group (effective from V10)**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Tax Scope**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Tag**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:99
+msgid "TVA 7.7% sur achat B&S (TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:99
+#: ../../accounting/localizations/switzerland.rst:101
+#: ../../accounting/localizations/switzerland.rst:103
+#: ../../accounting/localizations/switzerland.rst:105
+#: ../../accounting/localizations/switzerland.rst:115
+#: ../../accounting/localizations/switzerland.rst:115
+#: ../../accounting/localizations/switzerland.rst:117
+msgid "7.7%"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:99
+msgid "7.7% achat"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:99
+#: ../../accounting/localizations/switzerland.rst:101
+#: ../../accounting/localizations/switzerland.rst:103
+#: ../../accounting/localizations/switzerland.rst:105
+#: ../../accounting/localizations/switzerland.rst:115
+#: ../../accounting/localizations/switzerland.rst:117
+msgid "TVA 7.7%"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:99
+#: ../../accounting/localizations/switzerland.rst:101
+#: ../../accounting/localizations/switzerland.rst:103
+#: ../../accounting/localizations/switzerland.rst:105
+#: ../../accounting/localizations/switzerland.rst:107
+#: ../../accounting/localizations/switzerland.rst:109
+#: ../../accounting/localizations/switzerland.rst:111
+#: ../../accounting/localizations/switzerland.rst:113
+msgid "Purchases"
+msgstr "采购"
+
+#: ../../accounting/localizations/switzerland.rst:99
+#: ../../accounting/localizations/switzerland.rst:101
+#: ../../accounting/localizations/switzerland.rst:107
+#: ../../accounting/localizations/switzerland.rst:109
+msgid "Switzerland VAT Form: grid 400"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:101
+msgid "TVA 7.7% sur achat B&S (Incl. TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:101
+msgid "7.7% achat Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:103
+msgid "TVA 7.7% sur invest. et autres ch. (TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:103
+msgid "7.7% invest."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:103
+#: ../../accounting/localizations/switzerland.rst:105
+#: ../../accounting/localizations/switzerland.rst:111
+#: ../../accounting/localizations/switzerland.rst:113
+msgid "Switzerland VAT Form: grid 405"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:105
+msgid "TVA 7.7% sur invest. et autres ch. (Incl. TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:105
+msgid "7.7% invest. Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:107
+msgid "TVA 3.7% sur achat B&S (TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:107
+#: ../../accounting/localizations/switzerland.rst:109
+#: ../../accounting/localizations/switzerland.rst:111
+#: ../../accounting/localizations/switzerland.rst:113
+#: ../../accounting/localizations/switzerland.rst:119
+#: ../../accounting/localizations/switzerland.rst:119
+#: ../../accounting/localizations/switzerland.rst:121
+msgid "3.7%"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:107
+msgid "3.7% achat"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:107
+#: ../../accounting/localizations/switzerland.rst:109
+#: ../../accounting/localizations/switzerland.rst:111
+#: ../../accounting/localizations/switzerland.rst:113
+#: ../../accounting/localizations/switzerland.rst:119
+#: ../../accounting/localizations/switzerland.rst:121
+msgid "TVA 3.7%"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:109
+msgid "TVA 3.7% sur achat B&S (Incl. TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:109
+msgid "3.7% achat Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:111
+msgid "TVA 3.7% sur invest. et autres ch. (TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:111
+msgid "3.7% invest"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:113
+msgid "TVA 3.7% sur invest. et autres ch. (Incl. TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:113
+msgid "3.7% invest Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:115
+msgid "TVA due a 7.7% (TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:115
+#: ../../accounting/localizations/switzerland.rst:117
+#: ../../accounting/localizations/switzerland.rst:119
+#: ../../accounting/localizations/switzerland.rst:121
+#: ../../accounting/overview/process_overview/customer_invoice.rst:113
+#: ../../accounting/receivables/customer_invoices/overview.rst:16
+msgid "Sales"
+msgstr "销售"
+
+#: ../../accounting/localizations/switzerland.rst:115
+#: ../../accounting/localizations/switzerland.rst:117
+msgid ""
+"Switzerland VAT Form: grid 302 base, Switzerland VAT Form: grid 302 tax"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:117
+msgid "TVA due à 7.7% (Incl. TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:117
+msgid "7.7% Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:119
+msgid "TVA due à 3.7% (TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:119
+#: ../../accounting/localizations/switzerland.rst:121
+msgid ""
+"Switzerland VAT Form: grid 342 base, Switzerland VAT Form: grid 342 tax"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:121
+msgid "TVA due a 3.7% (Incl. TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:121
+msgid "3.7% Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:124
+msgid ""
+"If you have questions or remarks, please contact our support using "
+"odoo.com/help."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:128
+msgid ""
+"Don't forget to update your fiscal positions. If you have a version 11.1 (or"
+" higher), there is nothing to do. Otherwise, you will also have to update "
+"your fiscal positions accordingly."
 msgstr ""
 
 #: ../../accounting/others.rst:3
@@ -2943,8 +4014,8 @@ msgid ""
 msgstr "当折旧结束时, 可以手动关闭资产。如果发布的最后一行折旧,资产自动进入那个状态。"
 
 #: ../../accounting/others/adviser/assets.rst:0
-msgid "Category"
-msgstr "类别"
+msgid "Asset Category"
+msgstr "资产类别"
 
 #: ../../accounting/others/adviser/assets.rst:0
 msgid "Category of asset"
@@ -2952,11 +4023,43 @@ msgstr "资产类别"
 
 #: ../../accounting/others/adviser/assets.rst:0
 msgid "Date"
-msgstr "日期   "
+msgstr "日期"
 
 #: ../../accounting/others/adviser/assets.rst:0
 msgid "Date of asset"
 msgstr "资产日期"
+
+#: ../../accounting/others/adviser/assets.rst:0
+msgid "Depreciation Dates"
+msgstr "折旧日期"
+
+#: ../../accounting/others/adviser/assets.rst:0
+msgid "The way to compute the date of the first depreciation."
+msgstr ""
+
+#: ../../accounting/others/adviser/assets.rst:0
+msgid ""
+"* Based on last day of purchase period: The depreciation dates will be based"
+" on the last day of the purchase month or the purchase year (depending on "
+"the periodicity of the depreciations)."
+msgstr ""
+
+#: ../../accounting/others/adviser/assets.rst:0
+msgid ""
+"* Based on purchase date: The depreciation dates will be based on the "
+"purchase date."
+msgstr ""
+
+#: ../../accounting/others/adviser/assets.rst:0
+msgid "First Depreciation Date"
+msgstr "首次折旧日期"
+
+#: ../../accounting/others/adviser/assets.rst:0
+msgid ""
+"Note that this date does not alter the computation of the first journal "
+"entry in case of prorata temporis assets. It simply changes its accounting "
+"date"
+msgstr "请注意，该日期不改变第一日记账的计算情况下的临时资产。它只是改变其会计日期"
 
 #: ../../accounting/others/adviser/assets.rst:0
 msgid "Gross Value"
@@ -2997,16 +4100,14 @@ msgid "Time Method Based On"
 msgstr "时间方式基于"
 
 #: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"Choose the method to use to compute the dates and number of depreciation "
-"lines."
-msgstr "选择计算用的折旧方式."
+msgid "Choose the method to use to compute the dates and number of entries."
+msgstr ""
 
 #: ../../accounting/others/adviser/assets.rst:0
 msgid ""
-"* Number of Depreciations: Fix the number of depreciation lines and the time"
-" between 2 depreciations."
-msgstr "* 折旧数: 填写折旧期数和2个折旧的间隔."
+"* Number of Entries: Fix the number of entries and the time between 2 "
+"depreciations."
+msgstr ""
 
 #: ../../accounting/others/adviser/assets.rst:0
 msgid ""
@@ -3021,9 +4122,9 @@ msgstr "即时按比例分配"
 #: ../../accounting/others/adviser/assets.rst:0
 msgid ""
 "Indicates that the first depreciation entry for this asset have to be done "
-"from the purchase date instead of the first January / Start date of fiscal "
-"year"
-msgstr "表明第一次折旧从购买日期开始,而不是从年度第一个月开始."
+"from the asset date (purchase date) instead of the first January / Start "
+"date of fiscal year"
+msgstr "资产折旧的第一个凭证是从购买日开始而不是年初开始."
 
 #: ../../accounting/others/adviser/assets.rst:0
 msgid "Number of Depreciations"
@@ -3076,8 +4177,8 @@ msgid ""
 msgstr "如果你把资产的产品, 资产类别将自动填入该供应商的法案。"
 
 #: ../../accounting/others/adviser/assets.rst:111
-msgid "How to deprecate an asset?"
-msgstr "如何折旧资产？"
+msgid "How to depreciate an asset?"
+msgstr ""
 
 #: ../../accounting/others/adviser/assets.rst:113
 msgid ""
@@ -3167,18 +4268,11 @@ msgstr ""
 "也进一步配置是必要的。去 :menuselection:`Accounting module --> Configuration --> "
 "Settings` , 使用 **预算管理** 功能"
 
-#: ../../accounting/others/adviser/budget.rst:34
-msgid ""
-"If we want to be precise and point specific invoices and vendors bills to "
-"our budget, you should enable the Analytic accounting as well. If we don't "
-"we will only be able to budget the total amount of general accounts."
-msgstr "如果我们想要精确和指定供应商发票, 您应该启用分析会计。如果不用分析账户, 我们只能一般账户统计总额。"
-
-#: ../../accounting/others/adviser/budget.rst:40
+#: ../../accounting/others/adviser/budget.rst:35
 msgid "Budgetary Positions"
 msgstr "预算状况"
 
-#: ../../accounting/others/adviser/budget.rst:42
+#: ../../accounting/others/adviser/budget.rst:37
 msgid ""
 "Budgetary positions are the general accounts for which you want to keep "
 "budgets (typically expense or income accounts). They need to be defined so "
@@ -3187,7 +4281,7 @@ msgid ""
 msgstr ""
 "预算的位置一般是科目, 用于保存预算(通常是费用或收入科目)。事先需要定义, Odoo才知道怎样去抓取预算信息。有一些可能已在科目表中安装."
 
-#: ../../accounting/others/adviser/budget.rst:48
+#: ../../accounting/others/adviser/budget.rst:43
 msgid ""
 "To define the positions enter the :menuselection:`Accounting module --> "
 "Configuration --> Budgetary Positions`."
@@ -3195,74 +4289,70 @@ msgstr ""
 "定义位置, 进入 :menuselection:`Accounting module --> Configuration --> Budgetary "
 "Positions` ."
 
-#: ../../accounting/others/adviser/budget.rst:51
+#: ../../accounting/others/adviser/budget.rst:46
 msgid ""
 "For our example we need to define what accounts relates to our project's "
 "expenses. Create a position and add items to select the accounts."
 msgstr "在我们的示例中, 我们需要定义关联到项目费用的科目。创建一个位置并将条目添加到选择账户。"
 
-#: ../../accounting/others/adviser/budget.rst:57
+#: ../../accounting/others/adviser/budget.rst:52
 msgid ""
 "In this case we select the three relevant accounts used wherein we will book"
 " our expenses."
 msgstr "在这种情况下, 我们选择使用的三个相关科目, 用来登记费用。"
 
-#: ../../accounting/others/adviser/budget.rst:63
+#: ../../accounting/others/adviser/budget.rst:58
 msgid "Click on *Select*."
 msgstr "点击 *选择* 。"
 
-#: ../../accounting/others/adviser/budget.rst:68
+#: ../../accounting/others/adviser/budget.rst:63
 msgid "Save the changes to confirm your Budgetary position."
 msgstr "保存变更确认你的预算状况。"
 
-#: ../../accounting/others/adviser/budget.rst:70
+#: ../../accounting/others/adviser/budget.rst:65
 msgid ""
 "Repeat this steps to create a revenue budgetary position. Only in this case "
 "select the relevant income accounts."
 msgstr "重复这个步骤创建一个收入预算的位置。只有在这种情况下选择相关收入科目。"
 
-#: ../../accounting/others/adviser/budget.rst:74
+#: ../../accounting/others/adviser/budget.rst:69
 msgid "Analytical account"
 msgstr "分析会计"
 
-#: ../../accounting/others/adviser/budget.rst:76
+#: ../../accounting/others/adviser/budget.rst:71
 msgid ""
-"If you wish to point specific invoices or vendor bills to your budget you "
-"need to use analytical accounting. Odoo needs to know which costs or "
-"expenses are relevant to a specified budget. To do so we need to link our "
-"invoices and expenses to a defined analytical account. Create an analytical "
-"account by entering the Accounting module and clicking "
-":menuselection:`Advisers --> Analytic Accounts --> Open Charts`. Create a "
-"new Account called Smith&Co project and select the related partner."
+"Odoo needs to know which costs or expenses are relevant to a specified "
+"budget. To do so we need to link our invoices and expenses to a defined "
+"analytical account. Create an analytical account by entering the Accounting "
+"module and clicking :menuselection:`Advisers --> Analytic Accounts --> Open "
+"Charts`. Create a new Account called Smith&Co project and select the related"
+" partner."
 msgstr ""
-"如果你想具体分析发票或供应商账单, 你需要利用分析科目。Odoo需要知道指定预算的成本或费用。所以, 我们需要将发票和费用链接到分析科目。创建分析科目,"
-" 需进入会计模块和点击 :menuselection:`Advisers --> Analytic Accounts --> Open Charts` "
-". 创建一个名为Smith&Co项目并选择相关的合作伙伴。"
 
-#: ../../accounting/others/adviser/budget.rst:88
+#: ../../accounting/others/adviser/budget.rst:82
 msgid "Set a budget"
 msgstr "设置预算"
 
-#: ../../accounting/others/adviser/budget.rst:90
+#: ../../accounting/others/adviser/budget.rst:84
 msgid ""
 "Let's now set our targets for our budget. We specified that we expect to "
 "gain 1000 with this project and we would like not to spend more than 700."
 msgstr "现在, 让我们为我们的预算设定我们的目标。我们规定, 我们期望这个项目获得1000, 话费不超过700。"
 
-#: ../../accounting/others/adviser/budget.rst:94
+#: ../../accounting/others/adviser/budget.rst:88
 msgid ""
 "To set those targets, enter the accounting app, select "
 ":menuselection:`Advisers --> Budgets` and create a new Budget."
 msgstr "设定这些目标, 进入会计程序, 选择 :menuselection:`Advisers --> Budgets` , 创建一个新的预算。"
 
-#: ../../accounting/others/adviser/budget.rst:97
+#: ../../accounting/others/adviser/budget.rst:91
 msgid ""
 "We have to give a name to the budget. In this case we'll call it \"Smith "
 "Project\". Select the period wherein the budget will be applicable. Next add"
 " an item to specify your targets in the Budget Line."
 msgstr "我们需要为这个预算命名。在这种情况下, 我们把它叫做 \"史密斯项目\" 。选择预算适用的期间。下一步, 在预算行定义目标。 "
 
-#: ../../accounting/others/adviser/budget.rst:104
+#: ../../accounting/others/adviser/budget.rst:98
 msgid ""
 "Select the Budgetary Position related to the Budget Line. In other words, "
 "select the position that points to the accounts you want to budget. In this "
@@ -3274,56 +4364,56 @@ msgstr ""
 "选择相关预算行的预算位置。换句话说, 选择你想要的位置科目。在这种情况下, 我们将开始费用目标, 不超700。选择“成本\" 预算位置, "
 "指定计划预算金额。我们记录成本, 我们需要指定一个 **负数金额** 。最后, 选择相应的分析科目。 "
 
-#: ../../accounting/others/adviser/budget.rst:114
+#: ../../accounting/others/adviser/budget.rst:108
 msgid ""
 "Click on **Save & new** to input the revenue budget. The Budgetary Position "
 "is Revenue and the Planned Amount is 1000. Save and close"
 msgstr "点击 **Save & new** 输入收入预算。预算的位置是收入, 计划是1000。保存并关闭"
 
-#: ../../accounting/others/adviser/budget.rst:117
+#: ../../accounting/others/adviser/budget.rst:111
 msgid "You'll need to **Confirm** and **Approve** the budget."
 msgstr "你需要确认并且同意这个预算"
 
-#: ../../accounting/others/adviser/budget.rst:120
+#: ../../accounting/others/adviser/budget.rst:114
 msgid "Check your budget"
 msgstr "检查预算"
 
-#: ../../accounting/others/adviser/budget.rst:122
+#: ../../accounting/others/adviser/budget.rst:116
 msgid ""
 "You can check your budget at any time. To see the evolution, let's book some"
 " Invoices and Vendors Bills."
 msgstr "你可以在任何时间检查你的预算。查看进化, 让我们录入一些发票和供应商账单。"
 
-#: ../../accounting/others/adviser/budget.rst:127
+#: ../../accounting/others/adviser/budget.rst:121
 msgid ""
 "if you use analytical accounts remember that you need to specify the account"
 " in the invoice and / or purchase line."
 msgstr "如果你使用分析账户, 请记住, 您需要在发票上和/或购买行指定科目。"
 
-#: ../../accounting/others/adviser/budget.rst:131
+#: ../../accounting/others/adviser/budget.rst:125
 msgid "for more information about booking invoices and purchase orders see:"
 msgstr "关于发票和采购订单的信息请看 :"
 
-#: ../../accounting/others/adviser/budget.rst:133
+#: ../../accounting/others/adviser/budget.rst:127
 msgid ":doc:`../../receivables/customer_invoices/overview`"
 msgstr ":doc:`../../receivables/customer_invoices/overview` "
 
-#: ../../accounting/others/adviser/budget.rst:134
+#: ../../accounting/others/adviser/budget.rst:128
 msgid ":doc:`../../../purchase/overview/process/from_po_to_invoice`"
 msgstr ":doc:`../../../purchase/overview/process/from_po_to_invoice` "
 
-#: ../../accounting/others/adviser/budget.rst:136
+#: ../../accounting/others/adviser/budget.rst:130
 msgid "Go back in the budget list and find the Smith Project."
 msgstr "返回预算明细并且找到具体项目"
 
-#: ../../accounting/others/adviser/budget.rst:138
+#: ../../accounting/others/adviser/budget.rst:132
 msgid ""
 "Via the analytical account, Odoo can account the invoice lines and purchase "
 "lines booked in the accounts and will display them in the **Practical "
 "Amount** column."
 msgstr "通过分析账户, Odoo可以计算发票行和采购发票行, 金额将显示在 **实际金额** 列。"
 
-#: ../../accounting/others/adviser/budget.rst:147
+#: ../../accounting/others/adviser/budget.rst:141
 msgid ""
 "The theoretical amount represents the amount of money you theoretically "
 "could have spend / should have received in function of the date. When your "
@@ -4541,7 +5631,6 @@ msgid "Prepayments"
 msgstr "预付"
 
 #: ../../accounting/others/configuration/account_type.rst:39
-#: ../../accounting/overview/main_concepts/terminologies.rst:77
 msgid "Fixed Assets"
 msgstr "固定资产"
 
@@ -4624,7 +5713,7 @@ msgstr "科目类型用于信息目的，用于生成合乎各国财税规范的
 
 #: ../../accounting/others/configuration/account_type.rst:0
 msgid "Tags"
-msgstr "摘要"
+msgstr "标签"
 
 #: ../../accounting/others/configuration/account_type.rst:0
 msgid "Optional tags you may want to assign for custom reporting"
@@ -4632,7 +5721,7 @@ msgstr "你可能想赋予给定义报告的选项标签"
 
 #: ../../accounting/others/configuration/account_type.rst:0
 msgid "Account Currency"
-msgstr "科目币种"
+msgstr "币种"
 
 #: ../../accounting/others/configuration/account_type.rst:0
 msgid "Forces all moves for this account to have this account currency."
@@ -4651,7 +5740,7 @@ msgstr "'内部类型'用于不同类型的科目: 流动性用于现金或银�
 
 #: ../../accounting/others/configuration/account_type.rst:0
 msgid "Allow Reconciliation"
-msgstr "允许调节"
+msgstr "允许核销"
 
 #: ../../accounting/others/configuration/account_type.rst:0
 msgid ""
@@ -5079,6 +6168,10 @@ msgid ""
 msgstr ""
 "供应商退款将使用原始的购买价格, 所以退货时会零差异, 我们需要重用原来的价格。产品类别上的价格差异, 用于记录平均成本和原购买价格之间的差异。"
 
+#: ../../accounting/others/multicurrencies.rst:3
+msgid "Multicurrency"
+msgstr "多币种"
+
 #: ../../accounting/others/multicurrencies/exchange.rst:3
 msgid "Record exchange rates at payments"
 msgstr "在付款时登记汇率"
@@ -5489,6 +6582,7 @@ msgid "Invoices"
 msgstr "发票"
 
 #: ../../accounting/others/multicurrencies/invoices_payments.rst:64
+#: ../../accounting/payables/supplier_bills.rst:3
 msgid "Vendor Bills"
 msgstr "供应商帐单"
 
@@ -5752,10 +6846,6 @@ msgid ""
 "periods back from the date of the report if you don't want to use the "
 "default **Previous 1 Period** option."
 msgstr "你可以将当期的值与另一期间的值比较。也可选择多个期间进行比较。如果不想使用系统默认的* *前一期间  * *, 你可以选择之前的12期。"
-
-#: ../../accounting/others/reporting/main_reports.rst:30
-msgid "Balance Sheet"
-msgstr "资产负债表"
 
 #: ../../accounting/others/reporting/main_reports.rst:32
 msgid ""
@@ -6086,14 +7176,14 @@ msgid "For the purpose of this documentation, we will use the above use case:"
 msgstr "对于本文当的目的, 我们会使用以上的用例 :"
 
 #: ../../accounting/others/taxes/B2B_B2C.rst:91
-msgid "your product default sale price is 8.26€ price excluded"
-msgstr "产品的默认价格是8.26€, 不含税价"
+msgid "your product default sale price is 8.26€ tax excluded"
+msgstr ""
 
 #: ../../accounting/others/taxes/B2B_B2C.rst:93
 msgid ""
-"but we want to sell it at 10€, price included, in our shops or eCommerce "
+"but we want to sell it at 10€, tax included, in our shops or eCommerce "
 "website"
-msgstr "但是我们却想在我们店铺或者电商应用中卖10€, 含税价"
+msgstr ""
 
 #: ../../accounting/others/taxes/B2B_B2C.rst:97
 msgid "Setting your products"
@@ -6101,13 +7191,11 @@ msgstr "设置你的产品"
 
 #: ../../accounting/others/taxes/B2B_B2C.rst:99
 msgid ""
-"Your company must be configured with price excluded by default. This is "
+"Your company must be configured with tax excluded by default. This is "
 "usually the default configuration, but you can check your **Default Sale "
 "Tax** from the menu :menuselection:`Configuration --> Settings` of the "
 "Accounting application."
 msgstr ""
-"你的公司必须要配置为默认不含税价格。通常这是默认的配置, 但是你可以会计模块的 :menuselection:`配置(Configuration) "
-"-->设置(Settings)` 中勾选 **默认销项税** 。"
 
 #: ../../accounting/others/taxes/B2B_B2C.rst:107
 msgid ""
@@ -6184,12 +7272,11 @@ msgstr "避免更改每一张销售订单"
 
 #: ../../accounting/others/taxes/B2B_B2C.rst:158
 msgid ""
-"If you negotiate a contract with a customer, whether you negotiate price "
-"included or price excluded, you can set the pricelist and the fiscal "
-"position on the customer form so that it will be applied automatically at "
-"every sale of this customer."
+"If you negotiate a contract with a customer, whether you negotiate tax "
+"included or tax excluded, you can set the pricelist and the fiscal position "
+"on the customer form so that it will be applied automatically at every sale "
+"of this customer."
 msgstr ""
-"如果你和客户谈下来一个合同, 不管谈下来的价格是否含税, 你可以在客户的信息中维护价格表和财政位置, 然后该客户的所有订单都会自动带出正确的价格和税。"
 
 #: ../../accounting/others/taxes/B2B_B2C.rst:163
 msgid ""
@@ -6326,24 +7413,28 @@ msgid ""
 " just create two lines having the same *Tax on Product*."
 msgstr "对于某些财务状况，有时需要用另外两种税替换一种税，只需用同一个*产品税率*创建两行。"
 
-#: ../../accounting/others/taxes/application.rst:82
+#: ../../accounting/others/taxes/application.rst:80
+msgid "The fiscal positions are not applied on assets and deferred revenues."
+msgstr ""
+
+#: ../../accounting/others/taxes/application.rst:84
 #: ../../accounting/others/taxes/default_taxes.rst:27
 #: ../../accounting/others/taxes/retention.rst:70
 msgid ":doc:`create`"
 msgstr ":doc:`create` "
 
-#: ../../accounting/others/taxes/application.rst:83
+#: ../../accounting/others/taxes/application.rst:85
 #: ../../accounting/others/taxes/default_taxes.rst:29
 msgid ":doc:`taxcloud`"
 msgstr ":doc:`taxcloud`"
 
-#: ../../accounting/others/taxes/application.rst:84
+#: ../../accounting/others/taxes/application.rst:86
 #: ../../accounting/others/taxes/create.rst:70
 #: ../../accounting/others/taxes/default_taxes.rst:31
 msgid ":doc:`tax_included`"
 msgstr ":doc:`tax_included`"
 
-#: ../../accounting/others/taxes/application.rst:85
+#: ../../accounting/others/taxes/application.rst:87
 #: ../../accounting/others/taxes/default_taxes.rst:30
 msgid ":doc:`B2B_B2C`"
 msgstr ":doc:`B2B_B2C`"
@@ -6977,12 +8068,10 @@ msgstr "权责发生制和现金收付制方法"
 
 #: ../../accounting/overview/main_concepts/in_odoo.rst:25
 msgid ""
-"Odoo support both accrual and cash basis reporting. This allows you to "
+"Odoo supports both accrual and cash basis reporting. This allows you to "
 "report income / expense at the time transactions occur (i.e., accrual "
 "basis), or when payment is made or received (i.e., cash basis)."
 msgstr ""
-"Odoo支持权责发生制和现金收付制的报告。这允许你在交易发生的时间报告收入/费用（即, 权责发生制）, 或者在付出或者收到付款的时候（即, "
-"收付实现制）。"
 
 #: ../../accounting/overview/main_concepts/in_odoo.rst:30
 msgid "Multi-companies"
@@ -6990,10 +8079,10 @@ msgstr "多公司"
 
 #: ../../accounting/overview/main_concepts/in_odoo.rst:32
 msgid ""
-"Odoo allows to manage several companies within the same database. Each "
+"Odoo allows one to manage several companies within the same database. Each "
 "company has its own chart of accounts and rules. You can get consolidation "
 "reports following your consolidation rules."
-msgstr "Odoo允许在同一个数据库管理几个公司。每个公司有自己的科目表以及规则。依据你的合并规则, 你可以得到合并报告。"
+msgstr ""
 
 #: ../../accounting/overview/main_concepts/in_odoo.rst:36
 msgid ""
@@ -7026,12 +8115,11 @@ msgstr "国际标准"
 
 #: ../../accounting/overview/main_concepts/in_odoo.rst:54
 msgid ""
-"Odoo accounting support more than 50 countries. The Odoo core accounting "
-"implement accounting standards that is common to all countries and specific "
-"modules exists per country for the specificities of the country like the "
+"Odoo accounting supports more than 50 countries. The Odoo core accounting "
+"implements accounting standards that are common to all countries. Specific "
+"modules exist per country for the specificities of the country like the "
 "chart of accounts, taxes, or bank interfaces."
 msgstr ""
-"Odoo会计支持超过50个国家。Odoo核心会计实现的会计准则，是所有国家共用的，每个国家还存在特别的模块, 例如科目表, 税金, 以及银行接口。"
 
 #: ../../accounting/overview/main_concepts/in_odoo.rst:60
 msgid "In particular, Odoo's core accounting engine supports:"
@@ -7040,10 +8128,9 @@ msgstr "特别是, Odoo 核心会计引擎支持 :"
 #: ../../accounting/overview/main_concepts/in_odoo.rst:62
 msgid ""
 "Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking countries "
-"including Ireland, Canada, Australia, and New Zealand) where cost of good "
+"including Ireland, Canada, Australia, and New Zealand) where costs of good "
 "sold are reported when products are sold/delivered."
 msgstr ""
-"盎格鲁 - 撒克逊会计（美国, 英国, , 以及其他英语国家，包括爱尔兰, 加拿大, 澳大利亚和新西兰），其中，当产品售出/交付完成时报告销货成本。"
 
 #: ../../accounting/overview/main_concepts/in_odoo.rst:66
 msgid "European accounting where expenses are accounted at the supplier bill."
@@ -7143,8 +8230,8 @@ msgstr ""
 "Odoo通过匹配大部分导入的银行对帐单明细到你的会计交易，加快银行对账。 Odoo还记住你是如何处理其他的银行对帐单明细，并提供建议的总帐交易。"
 
 #: ../../accounting/overview/main_concepts/in_odoo.rst:119
-msgid "Calculates the tax you owe your tax authority"
-msgstr "计算你欠税务机关的税金"
+msgid "Calculate the tax you owe your tax authority"
+msgstr ""
 
 #: ../../accounting/overview/main_concepts/in_odoo.rst:121
 msgid ""
@@ -7179,12 +8266,11 @@ msgstr "容易的留存收益"
 
 #: ../../accounting/overview/main_concepts/in_odoo.rst:139
 msgid ""
-"Retained earnings is the portion of income retained by your business. Odoo "
+"Retained earnings are the portion of income retained by your business. Odoo "
 "automatically calculates your current year earnings in real time so no year-"
 "end journal or rollover is required.  This is calculated by reporting the "
 "profit and loss balance to your balance sheet report automatically."
 msgstr ""
-"留存收益是你企业留存的部分收入。 Odoo实时自动计算你的当年盈利，所以年终分录或翻转是没必要的。这是通过自动将损益表报告到资产负债表计算得到的。"
 
 #: ../../accounting/overview/main_concepts/intro.rst:3
 msgid "Introduction to Odoo Accounting"
@@ -7431,7 +8517,6 @@ msgstr "银行账户 :在相关的银行存款日记帐定义"
 #: ../../accounting/overview/main_concepts/memento.rst:216
 #: ../../accounting/overview/main_concepts/memento.rst:226
 #: ../../accounting/overview/main_concepts/memento.rst:242
-#: ../../accounting/overview/main_concepts/terminologies.rst:26
 msgid "Reconciliation"
 msgstr "调节"
 
@@ -7712,166 +8797,13 @@ msgstr "银行对账单"
 msgid "Statement XYZ"
 msgstr "对账单XYZ"
 
-#: ../../accounting/overview/main_concepts/terminologies.rst:3
-msgid "Accounting Terminologies"
-msgstr "会计术语"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:6
-msgid "Journal"
-msgstr "日记账"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:9
-msgid ""
-"A journal is like a folder in which you record all transactions of the same "
-"type: all the statements of a bank account, all customer invoices, all "
-"supplier bills. It's used to organize similar transactions together."
-msgstr "账簿就像一个文件夹, 将相同类型的所有交易都记录在里面:所有银行科目的记录,所有客户发票,供应商账单。它用于归类类似的交易。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:13
-msgid "Payment Terms"
-msgstr "付款条款"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:16
-msgid ""
-"Payment terms describe how and when a customer invoice (or supplier bill) "
-"should be paid over the time. Example: 30% direct payment, balance due in "
-"two months."
-msgstr "付款条件用于客户发票(或供应商发票)应支付的时间和方式。例如:直接支付30%,在两个月内支付余款。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:22
-msgid ""
-"Bank reconciliation is the process of matching transactions from your bank "
-"records with existing journal items or creating new journal items on the "
-"fly. It is a process of verification to ensure that your bank and your "
-"records in Odoo say the same thing."
-msgstr "银行核销的过程其实就是将银行交易和已存在的分录核销。它是一个验证的过程,以确保银行和Odoo的记录相匹配。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:29
-msgid ""
-"Journal items reconciliation is the process of linking several journal items"
-" together like an invoice and a payment. This allows you to mark invoices as"
-" paid. It is also useful when comparing values of 'goods received not "
-"invoiced' and 'goods shipped not billed' accounts."
-msgstr "分录的核销是多个分录匹配的过程, 就如发票和付款。这可以将发票标记为已付. 这也可用于标注'商品已收但未开票'和'货已发但未开票'。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:33
-msgid "Deposit Ticket"
-msgstr "存款单"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:36
-msgid ""
-"Deposit tickets group several payment orders (usually checks) that are "
-"deposited together at the bank at the same time. This allows an easy "
-"reconciliation with the bank statement line if the line has one line per "
-"deposit."
-msgstr "存单组是指银行同时收到多笔付款(通常是支票)。如果每行一个存单的话, 核销就很容易了。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:40
-msgid "Journal Entry"
-msgstr "日记账分录"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:43
-msgid ""
-"A journal entry is an accounting transaction, usually related to a financial"
-" document: invoice, payment, receipt, etc. A journal entry always consists "
-"of at least two lines, described here as journal items, which credit or "
-"debit specific accounts. The sum of the credits of all journal items of a "
-"journal entry must be equal to the sum of their debits for the entry to be "
-"valid."
-msgstr "分录是一个会计事务,通常涉及:发票,付款,收据,等。会计凭证至少包含两行,就是两条分录,分别为借贷科目。借贷之和必须平。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:50
-msgid "Journal Item"
-msgstr "日记账项目"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:53
-msgid ""
-"A line of a journal entry, with a monetary debit or credit associated with a"
-" specific account."
-msgstr "分录的行, 借方或贷方与科目相关联。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:55
-msgid "Analytic Accounts"
-msgstr "分析账户"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:58
-msgid ""
-"Sometimes called **Cost Accounts**, are accounts that are not part of the "
-"chart of accounts and that allow you to track costs and revenues. Analytic "
-"accounts are usually grouped by projects, departments, etc. for analysis of "
-"a company's expenditures. Every journal item is posted in a regular account "
-"in the chart of account and can be posted to an analytic account for the "
-"purpose of reporting or analysis."
-msgstr ""
-"* *成本科目 * *, 有时可能不是会计科目表的一部分,但需要分析成本和收入。分析账户通常是按项目, 部门分组, "
-"分析一个公司的支出。每条分录可归集到科目表,可同时过账到分析可目表, 用于生成报表和分析。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:65
-msgid "Analytic Entries"
-msgstr "分析分录"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:68
-msgid ""
-"Costs or revenues posted to analytic accounts, usually related to journal "
-"entries."
-msgstr "营收或者成本过账到成本账户, 通常和会计分录相关。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:70
-msgid "Sales Receipt"
-msgstr "销售收据"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:73
-msgid ""
-"A receipt or other slip of paper issued by a store or other vendor "
-"describing the details of a purchase (amount, date, department, etc.). Sales"
-" receipt are usually used instead of invoices if the sale is paid in cash in"
-" a store."
-msgstr "收据或是其他纸质凭证通常包含细节描述(金额、日期、部门等)。如果商店收取的是现金, 销售收据通常用来代替发票。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:80
-msgid ""
-"Property owned by the company, usually with a useful life greater than one "
-"reporting period. Odoo Asset management is used to manage the depreciation /"
-" amortization of the asset over the time. Typical examples would be capital "
-"equipment, vehicles, and real estate."
-msgstr "通常资产的使用寿命大于一个会计期间。Odoo资产管理用来管理资产的折旧/摊销的时间。典型的例子是资本设备、车辆和房地产。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:84
-msgid "Deferred Revenues"
-msgstr "递延收入"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:87
-msgid ""
-"Are used to recognize revenues for sales of services that are provided over "
-"a long period of time. If you sell a 3 year maintenance contract, you can "
-"use the deferred revenue mechanism to recognize 1/36 of the revenue every "
-"month until the contract expires, rather than taking it all initially or at "
-"the end."
-msgstr ""
-"用于确认长时间提供的服务的收入。如果一个3年的维护合同, 可以使用递延收入机制, 每个月收入为1/36, 直到合同到期, 而不是开始时或结束时入账。"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:93
-msgid "Fiscal Position"
-msgstr "财政状况"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:96
-msgid ""
-"Define the taxes that should be applied for a specific customer/vendor or "
-"invoice. Example: If some customers benefit from specific taxes (government,"
-" construction companies, EU companies that are VAT subjected,…), you can "
-"assign a fiscal position to them and the right tax will be selected "
-"according to the products they buy."
-msgstr ""
-"客户/供应商或发票上可定义税率。例如:如有些客户受益于特定的税收(政府、建筑公司、增值税受到欧盟企业,…),您可以指定一个财政状况, "
-"根据他们购买的产品选择正确的税。"
-
 #: ../../accounting/overview/process_overview.rst:3
 msgid "Process overview"
 msgstr "过程概述"
 
 #: ../../accounting/overview/process_overview/customer_invoice.rst:3
-msgid "From Invoice to Payment Collection"
-msgstr "从发票到付款收集"
+msgid "From Customer Invoice to Payments Collection"
+msgstr ""
 
 #: ../../accounting/overview/process_overview/customer_invoice.rst:5
 msgid ""
@@ -8064,11 +8996,6 @@ msgstr "115"
 msgid "15"
 msgstr "15"
 
-#: ../../accounting/overview/process_overview/customer_invoice.rst:113
-#: ../../accounting/receivables/customer_invoices/overview.rst:16
-msgid "Sales"
-msgstr "销售"
-
 #: ../../accounting/overview/process_overview/customer_invoice.rst:117
 #: ../../accounting/receivables/customer_invoices/cash_discounts.rst:89
 msgid "Payment"
@@ -8206,7 +9133,8 @@ msgid ""
 msgstr "举个例子,如果你用永久的会计方法管理库存, 一旦材料发给客户, 应减少“流动资产”。"
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:3
-msgid "From Vendor Bills to Payments"
+#: ../../accounting/overview/process_overview/supplier_bill.rst:15
+msgid "From Vendor Bill to Payment"
 msgstr "从供应商账单到付款"
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:5
@@ -8223,10 +9151,6 @@ msgid ""
 "the Odoo Purchase application that allows you to control and pre-complete "
 "them automatically based on past purchase orders."
 msgstr "如果你想管理供应商发票, 可使用Odoo采购应用程序, 程序可基于过去的采购订单控制和自动完成发票管理。"
-
-#: ../../accounting/overview/process_overview/supplier_bill.rst:15
-msgid "From Vendor Bill to Payment"
-msgstr "从供应商账单到付款"
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:18
 msgid "Record a new vendor bill"
@@ -8414,10 +9338,6 @@ msgstr ":doc:`customer_invoice` "
 #: ../../accounting/payables.rst:3
 msgid "Account Payables"
 msgstr "应付账款"
-
-#: ../../accounting/payables/misc.rst:3
-msgid "Misc"
-msgstr "杂项"
 
 #: ../../accounting/payables/misc/employee_expense.rst:3
 msgid "How to keep track of employee expenses?"
@@ -8850,8 +9770,8 @@ msgid ""
 msgstr "从这个页面上,使用汇总“到期日”功能, 通过数据透视表或图表视图可得到下个月的应付到期额。"
 
 #: ../../accounting/payables/pay.rst:3
-msgid "Pay supplier bills"
-msgstr "支付供应商帐单"
+msgid "Vendor Payments"
+msgstr "供应商账单"
 
 #: ../../accounting/payables/pay/check.rst:3
 msgid "Pay by Checks"
@@ -8960,12 +9880,10 @@ msgstr "用支票登记付款"
 #: ../../accounting/payables/pay/check.rst:66
 msgid ""
 "To register a payment on a bill, open any supplier bill from the menu "
-":menuselection:`Purchases --> Supplier Bills`. Once the supplier bill is "
+":menuselection:`Purchases --> Vendor Bills`. Once the supplier bill is "
 "validated, you can register a payment. Set the **Payment Method** to "
 "**Check** and validate the payment dialog."
 msgstr ""
-"如需在账单上登记付款,在此点开发票:menuselection:`Purchases --> Supplier Bills`.  "
-"一旦采购发票审核,可登记付款。在对话框内, 将* *支付方式* *设置为 * * 支票* *。"
 
 #: ../../accounting/payables/pay/check.rst:74
 msgid "Explanation of the fields of the payment screen:"
@@ -8977,7 +9895,7 @@ msgstr "有发票"
 
 #: ../../accounting/payables/pay/check.rst:0
 msgid "Technical field used for usability purposes"
-msgstr "技术字段可使用"
+msgstr "用于可用性用途的技术领域"
 
 #: ../../accounting/payables/pay/check.rst:0
 msgid "Hide Payment Method"
@@ -8987,7 +9905,36 @@ msgstr "隐藏付款方式"
 msgid ""
 "Technical field used to hide the payment method if the selected journal has "
 "only one available which is 'manual'"
-msgstr "当所选的账设置为“手动”, 支付方式的字段被隐藏."
+msgstr "技术领域用于隐藏的付款方法，如果选择的日记账只有一个可用的是“手动”"
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid "Check: Pay bill by check and print it from Odoo."
+msgstr ""
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid ""
+"Batch Deposit: Encase several customer checks at once by generating a batch "
+"deposit to submit to your bank. When encoding the bank statement in Odoo, "
+"you are suggested to reconcile the transaction with the batch deposit.To "
+"enable batch deposit, module account_batch_payment must be installed."
+msgstr ""
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid ""
+"SEPA Credit Transfer: Pay bill from a SEPA Credit Transfer file you submit "
+"to your bank. To enable sepa credit transfer, module account_sepa must be "
+"installed"
+msgstr ""
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid "Show Partner Bank Account"
+msgstr "显示合作伙伴银行账户"
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid ""
+"Technical field used to know whether the field `partner_bank_account_id` "
+"needs to be displayed or not in the payments form views"
+msgstr "字段用于告知‘partner_bank_account_id’字段是否需要被显示在付款表单视图中。"
 
 #: ../../accounting/payables/pay/check.rst:0
 msgid "Code"
@@ -8996,7 +9943,7 @@ msgstr "代码"
 #: ../../accounting/payables/pay/check.rst:0
 msgid ""
 "Technical field used to adapt the interface to the payment type selected."
-msgstr "技术字段根据付款类型来调整。"
+msgstr "技术领域中使用的，以适应该接口所选择的付款类型。"
 
 #: ../../accounting/payables/pay/check.rst:0
 msgid "Check Number"
@@ -9288,6 +10235,7 @@ msgid ""
 msgstr "SEPA,是唯一欧元付款地, 是欧盟的付款倡议简化欧元转帐。SEPA将付款单发给银行以简化转账。"
 
 #: ../../accounting/payables/pay/sepa.rst:10
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:10
 msgid ""
 "SEPA is supported by the banks of the 28 EU member states as well as "
 "Iceland, Norway, Switzerland, Andorra, Monaco and San Marino."
@@ -9452,10 +10400,6 @@ msgstr "用SEPA支付,收款人必须有有效的IBAN和BIC。如果这个提示
 #: ../../accounting/receivables/customer_payments/recording.rst:129
 msgid ":doc:`check`"
 msgstr ":doc:`check` "
-
-#: ../../accounting/payables/supplier_bills.rst:3
-msgid "Supplier Bills"
-msgstr "供应商票据"
 
 #: ../../accounting/payables/supplier_bills/bills_or_receipts.rst:3
 msgid "When should I use supplier bills or purchase receipts?"
@@ -9900,6 +10844,7 @@ msgid "Account Receivables"
 msgstr "应收账款"
 
 #: ../../accounting/receivables/customer_invoices.rst:3
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:53
 msgid "Customer Invoices"
 msgstr "客户发票"
 
@@ -10075,6 +11020,78 @@ msgstr "如果客户全额支付，没有使用现金折扣，将付款(完全)�
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:86
 msgid ":doc:`overview`"
 msgstr ":doc:`overview` "
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:2
+msgid "Set up cash roundings"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:4
+msgid ""
+"In some currencies, the smallest coins do not exist. For example, in "
+"Switzerland, there is no coin for 0.01 CHF. For this reason, if invoices are"
+" paid in cash, you have to round their total amount to the smallest coin "
+"that exist in the currency. For the CHF, the smallest coin is 0.05 CHF."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:10
+msgid "There are two strategies for the rounding:"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:12
+msgid "Add a line on the invoice for the rounding"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:14
+msgid "Add the rounding in the tax amount"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:16
+msgid "Both strategies are applicable in Odoo."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:21
+msgid ""
+"First, you have to activate the feature. For this, go in "
+":menuselection:`Accounting --> Configuration --> Settings` and activate the "
+"Cash Rounding."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:28
+msgid ""
+"There is a new menu to manage cash roundings in :menuselection:`Accounting "
+"--> Configuration --> Management --> Cash roundings`."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:31
+msgid ""
+"Now, you can create cash roundings. You can choose between two rounding "
+"strategies:"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:34
+msgid ""
+"**Add a rounding line**: if a rounding is necessary, Odoo will add a line on"
+" your customer invoice to take this rounding into account. You also have to "
+"define the account in which the rounding will go."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:39
+msgid ""
+"**Modify tax amount:** Odoo will add the rounding to the amount of the "
+"highest tax."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:46
+msgid "Apply roundings"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/cash_rounding.rst:48
+msgid ""
+"Once your roundings are created, you can apply them on customer invoices. On"
+" the customer invoices, there is a new field called **Cash Rounding Method**"
+" where you can simply choose one of the rounding methods created previously."
+" If needed, a rounding will be applied to the invoice."
+msgstr ""
 
 #: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:3
 msgid "Deferred revenues: how to automate them?"
@@ -10303,14 +11320,12 @@ msgstr ""
 
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:25
 msgid ""
-"A payment term may have one line (ex: 21 days) or several lines (10% within "
+"A payment term may have one line (eg: 21 days) or several lines (10% within "
 "3 days and the balance within 21 days). If you create a payment term with "
 "several lines, make sure the latest one is the balance. (avoid doing 50% in "
 "10 days and 50% in 21 days because, with the rounding, it may not compute "
 "exactly 100%)"
 msgstr ""
-"付款条款可能有一行(例如 :21天)或几行(3天内支付10％, 余款在21天内支付)。如果创建的付款条款有多行, 确保最后一行用余额。(避免: "
-"50％在10天内付清, 50％21天付清, 因为有时有小数点, 可能无法做完全100％)"
 
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:36
 msgid ""
@@ -10395,93 +11410,6 @@ msgstr "在客户对账单中，您将看到不同到期日的两行。如需查
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:87
 msgid ":doc:`payment_terms`"
 msgstr ":doc:`payment_terms` "
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:3
-msgid "How to modify a validated invoice?"
-msgstr "如何修改验证过的发票？"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:5
-msgid ""
-"In most accounting legislation over the word, it's not allowed to modify an "
-"invoice that is validated and sent to the customer. However, you sometimes "
-"need to change an invoice for different reasons: the sale has changed, the "
-"made a mistake while recording the invoice, etc."
-msgstr "在大多数地方的会计法规定，确认并发送给客户的发票不允许更改。然而，你有时需要改变发票：销售发生了变化，在登记发票时的错误，等等。"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:10
-msgid "Thus, the right way to modify an invoice is to:"
-msgstr "因此，修改发票的正确方法是："
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:12
-msgid "Refund the original invoice"
-msgstr "退款原始发票"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:13
-msgid "Create a new invoice"
-msgstr "创建一个新发票"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:15
-msgid ""
-"Odoo's refund mechanism helps you handle the whole process in just a few "
-"clicks."
-msgstr "只需点击几下,就可处理完退款."
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:19
-msgid "Modify an invoice"
-msgstr "修改一个发票"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:21
-msgid ""
-"If your invoice is still in draft, you can modify it the way you want. "
-"However, if your invoice is validated, you can not change it anymore. If you"
-" need to modify it, the right operations to do are:"
-msgstr "如果发票仍在草稿状态，可以修改。但是，如果发票已验证，就不能再更改了。如果你需要修改，正确的操作是："
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:25
-msgid "Refund the original invoice;"
-msgstr "退款原始发票；"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:26
-msgid "Reconcile the original invoice with the refund to void them;"
-msgstr "将原来的发票和红冲发票核销；"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:27
-msgid "Create a new draft invoice, a copy of the original;"
-msgstr "创建一个新的草稿发票, 通过复制原始发票;"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:28
-msgid "Validate the new invoice."
-msgstr "确认新发票"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:30
-msgid ""
-"All those steps are automated by Odoo. All you have to do is to click on the"
-" Refund button on an invoice."
-msgstr "所有这些步骤都是Odoo自动完成的。你所要做的就是点击发票上的退款按钮。"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:36
-msgid ""
-"In the refund dialog, select the option \"Modify: create a refund, reconcile"
-" and create a draft invoice\". Once you click on the \"Create Refund\" "
-"button, Odoo will void your existing invoice and create a new draft invoice "
-"that is a duplicate of the original one."
-msgstr ""
-"在“退款”对话框中，选择“修改：创建一个退款，核销并创建一张草稿发票”。点击“创建退款”按钮后，Odoo将作废现有的发票并通过复制原有发票创建一张新的发票。"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:41
-msgid "Edit this new draft invoice and validate it when it's correct."
-msgstr "编辑这个新发票，验证无误后确认"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:45
-msgid ""
-"if you already sent the original invoice to your customer, you should send "
-"the new invoice and the refund to the customer so that he gets all the "
-"documents."
-msgstr "如果你已经把初始发票寄给了你的客户，你应该把新开的发票和退还款项也寄送给客户以使其得到全部记录"
-
-#: ../../accounting/receivables/customer_invoices/modify_validated.rst:50
-msgid ":doc:`refund`"
-msgstr ":doc:`refund` "
 
 #: ../../accounting/receivables/customer_invoices/overview.rst:3
 msgid "Overview of the invoicing process"
@@ -10885,6 +11813,315 @@ msgstr "退票不同于退款。通常情况下，在客户未付款前可退票
 #: ../../accounting/receivables/customer_payments.rst:3
 msgid "Customer Payments"
 msgstr "客户付款"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:3
+msgid "How to automate customer follow-ups with plans?"
+msgstr "如何自动有计划地跟进客户？"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:5
+msgid ""
+"With the Odoo Accounting application, you get a dynamic aged receivable "
+"report, customer statements and you can easily send them to customers."
+msgstr "在会计应用，你会得到一个动态的应收款报表，客户对账表，可发送给客户。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:8
+msgid ""
+"If you want to go further in the automation of the credit collection "
+"process, you can use follow-up plans. They will help you automate all the "
+"steps to get paid, by triggering them at the right time: send customer "
+"statements by emails, send regular letter (through the Docsaway "
+"integration), create a task to manually call the customer, etc..."
+msgstr ""
+"如果你想进一步自动化信用收集，可使用跟踪计划。他们会帮助你自动完成收款所有的步骤：将客户对账单电子邮件给客户，定期发封信(通过docsaway集成)，创建一个任务，手动打电话给客户，等等..."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:14
+msgid "Here is an example of a plan:"
+msgstr "这里是一项计划的例子 :"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "When?"
+msgstr "何时？"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "What?"
+msgstr "什么？"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "Who?"
+msgstr "谁？"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+msgid "3 days before due date"
+msgstr "3天后过期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+msgid "Email"
+msgstr "电子邮箱"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "automated"
+msgstr "自动的"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "1 day after due date"
+msgstr "1 天后过期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "Email + Regular Letter"
+msgstr "电子邮件 + 定期信件"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+msgid "15 days after due date"
+msgstr "15 天后过期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+msgid "Call the customer"
+msgstr "致电客户"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "John Mac Gregor"
+msgstr "John Mac Gregor"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "35 days after due date"
+msgstr "35天后过期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "Email + Letter + Call"
+msgstr "电子邮件 + 信件 + 电话"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "60 days after due date"
+msgstr "60 天后过期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "Formal notice"
+msgstr "正式通知"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "Bailiff"
+msgstr "Bailiff"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:34
+msgid "Install Reminder Module"
+msgstr "安装提醒模块"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:36
+msgid ""
+"You must start by activating the feature, using the menu "
+":menuselection:`Configuration --> Settings` of the Accounting application. "
+"From the settings screen, activate the feature **Enable payment follow-up "
+"management**."
+msgstr ""
+"你必须先激活功能，使用菜单 :menuselection:`Configuration --> Settings` .  "
+"从设置界面，激活功能**Enable payment follow-up management**."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:44
+msgid "Define Payment Follow-ups Levels"
+msgstr "定义付款追踪等级"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:46
+msgid ""
+"To automate customer follow ups, you must configure your follow–up levels "
+"using the menu :menuselection:`Accounting --> Configuration --> Payment "
+"Follow-ups`. You should define one and only one follow-up plan per company."
+msgstr ""
+"自动化的跟进客户，必须配置, 菜单:`Accounting --> Configuration --> Payment Follow-ups`. "
+"你应该定义一个公司，每个公司只有一个跟进计划。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:50
+msgid ""
+"The levels of follow-up are relative to the due date; when no payment term "
+"is specified, the invoice date will be considered as the due date."
+msgstr "跟进关联到期日；当没有付款条款时，发票日期将视为到期日。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:53
+msgid ""
+"For each level, you should define the number of days and create a note which"
+" will automatically be added into the reminder letter."
+msgstr "对于每一个级别，应定义天数，并创建一个将自动添加到提醒函中的说明。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:59
+msgid "Odoo defines several actions for every reminder:"
+msgstr "Odoo为每个提醒定义了几个行动 :"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:61
+msgid ""
+"**Manual Action:** assign a responsible that will have to call the customer"
+msgstr "* *手动操作：**指定一个电话给客户的负责人"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:62
+msgid "**Send an Email:** send an email to customer using the provided text"
+msgstr " **发送一个邮件 :** 使用所提供的文本发送一封电子邮件给客户"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:63
+msgid ""
+"**Send a Letter:** send a letter by regular mail, using the provided note"
+msgstr " **发送一个信件 :** 使用提供的备注, 通过定期邮件发送一个信件"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:69
+msgid ""
+"As you need to provide a number of days relative to the due date, you can "
+"use a negative number. As an example, if an invoice is issued the January "
+"1st but the due date is January 20, if you set a reminder 3 days before the "
+"due date, the customer may receive an email in January 17."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:76
+msgid "Doing your weekly follow-ups"
+msgstr "每周做的跟进工作"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:78
+msgid ""
+"Once everything is setup, Odoo will prepare follow-up letters and emails "
+"automatically for you. All you have to do is to the menu "
+":menuselection:`Sales --> Customers Statement` in the accounting "
+"application."
+msgstr ""
+"一旦一切设置好，Odoo将自动发送跟进信件和邮件。必须的设置, 在菜单:menuselection:`Sales --> Customers "
+"Statement`."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:85
+msgid ""
+"Odoo will automatically propose you actions based on the follow-up plan you "
+"defined, invoices to pay and payment received."
+msgstr "Odoo会基于定义的跟踪计划自动建议后续行动，收支款项。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:88
+msgid ""
+"You can use this menu every day, once a week or once a month. You do not "
+"risk to send two times the same reminder to your customer. Odoo only "
+"proposes you the action you have to do. If you do it every day, you will "
+"have a few calls to do per day. If you do it once a month, you will have "
+"much more work once you do it."
+msgstr ""
+"你可每天，每周或每月一次使用这个菜单。你不用担心发送多次提醒给客户。Odoo只会提醒必做的工作。如果你每天都这样做，你每天都会有几个电话。如果你一个月做一次，工作会囤积得比较多。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:94
+msgid ""
+"It's up to you to organize the way you want to work. But it's a good "
+"practice to reconcile your bank statements before launching the follow-ups. "
+"That way, all paid invoices will be reconciled and you will not send a "
+"follow-up letter to a customer that already paid his invoice."
+msgstr "由你来决定工作的方式。但运行跟踪行动前, 请先将银行对账单核销。这样，所有的支付发票将被核销，以免给已付款的客户发送催款信。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:99
+msgid "From a customer follow-up proposition, you can:"
+msgstr "通过客户跟进提议, 你可以:"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:101
+msgid "Get the customer information to contact him"
+msgstr "取得客户的联系方式并联系他"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:103
+msgid "Drill down to the customer information form by clicking on its name"
+msgstr "点击名字，下拉客户信息表"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:105
+msgid "Change the text (or the email or letter) and adapt to the customer"
+msgstr "更改文本(或电子邮件或信)使之适应客户"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:107
+msgid ""
+"Change the colored dot to mark the customer as being a good, normal or bad "
+"debtor"
+msgstr "更改彩色点标记客户为好、一般或差债务人"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:110
+msgid "Log a note is you called the customer"
+msgstr "将你联系过客户的相关信息记录一下"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:112
+msgid "Exclude some invoices from the statement table (litigation)"
+msgstr "对账单不含这些发票(诉讼)"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:114
+msgid "Send an email with the statement"
+msgstr "发送一份账单邮件"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:116
+msgid ""
+"Print a letter, or send a regular mail (if you installed the Docsaway "
+"integration)"
+msgstr "打印一封信, 或发送定期邮件 (如果您安装了 Docsaway 集成)"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:119
+msgid ""
+"Plan the next reminder (but it's better to keep in automatic mode so that "
+"Odoo will stick to the follow-up plan of the company)"
+msgstr "计划下次提醒(但最好在自动模式下，Odoo将自动进行公司的跟踪计划)"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:122
+msgid "Drill down to an invoice"
+msgstr "深入一张发票"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:124
+msgid ""
+"Change the expected payment date of an invoice (thus, impacting the next "
+"time Odoo will propose you to send a reminder)"
+msgstr "更改发票的预期的付款日期 (因此, 影响下一次 Odoo 建议您发送提醒的时间)"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:128
+msgid ""
+"You can force a customer statement, even if Odoo do not proposes you to do "
+"it, because it's not the right date yet. To do this, you should go to the "
+"Aged Receivable report (in the report menu of the Accounting application). "
+"From this report, you can click on a customer to get to his customer "
+"statement."
+msgstr ""
+"你可以查看客户对账单，即使Odoo因为未到日期没有建议你这样做。要做到这一点，去应收账龄表(在会计应用程序下的报表菜单)。从这份报告中，你可以点击一个客户,"
+" 可看到客户对账单。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:135
+msgid "How to exclude an invoice from auto follow up?"
+msgstr "如何从自动催款里面排除发票？"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:137
+msgid "To see all **overdue invoices** or **on need of action**,"
+msgstr "查看所有 **逾期发票** 或 **需要的行动** "
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:139
+msgid "Go to :menuselection:`Accounting --> Sales --> Customers Statement`"
+msgstr ""
+"转到 :menuselection:`会计(Accounting) -->销售(Sales) -->客户对账单(Customers "
+"Statement)` "
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:145
+msgid "Exclude a specific invoice for a specific date"
+msgstr "排除特定日期的特定日期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:147
+msgid ""
+"Odoo can exclude an invoice from follow-ups actions for specific date by "
+"clicking on **Log a Note**, then choose one of the ready options (*one "
+"week*, *two weeks*, *one month*, *two months*), So Odoo will calculate the "
+"required date according to the current date."
+msgstr ""
+"点击**Log a Note**, 在跟踪计划时可不含这些发票，然后选择一个选项(*一周*，* "
+"两周*，*一个月*，*两个月*)，所以Odoo会根据当前日期计算所需的时间。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:155
+msgid ""
+"Another way to achieve it is the following: click on the required invoice, "
+"then choose **Change expected payment date/note**, then enter a new payment "
+"date and note."
+msgstr "另一种方法也可以实现：点击所需的发票，然后选择**更改预期的付款日期/说明**，然后输入一个新的付款日期和说明。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:162
+msgid "Exclude a specific invoice forever"
+msgstr "永久的排除特定的发票"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:164
+msgid ""
+"Odoo can exclude an invoice for a specific customer by clicking on the "
+"checkbox **Excluded**"
+msgstr "Odoo 可以为特定客户免开发票 , 通过点击复选框 **排除** "
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:168
+msgid "If you click on **History**, you can see all follow ups actions."
+msgstr "如果你点击了 **历史记录** , 你可以看到所有的后续操作。"
 
 #: ../../accounting/receivables/customer_payments/check.rst:3
 msgid "How to register customer payments by checks?"
@@ -11533,6 +12770,128 @@ msgid ""
 "Reporting (check the KPI average debtors days)."
 msgstr "你可以从报告下的执行概要得到你公司的DSO (检查KPI平均债务人天数)"
 
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:3
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:29
+msgid "Get paid with SEPA"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:5
+msgid ""
+"SEPA, the Single Euro Payments Area, is a payment-integration initiative of "
+"the European Union for simplification of bank transfers denominated in EURO."
+" SEPA Direct Debit allows you to withdraw money from the bank accounts of "
+"your customers with their approval."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:13
+msgid ""
+"With Odoo, you can record customer mandates, generate an SDD XML file "
+"containing customer payments and upload it in your bank interface. The file "
+"follows the SEPA Direct Debit PAIN.008.001.02 specifications. This is a "
+"well-defined standard that makes consensus among banks."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:21
+msgid ""
+"Go in :menuselection:`Accounting --> Configuration --> Settings` and "
+"activate the SEPA Direct Debit (SDD) Feature. Enter the Creditor Identifier "
+"of your company. This number is provided by your bank."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:32
+msgid "Direct Debit Mandates"
+msgstr "直接借记的授权范围"
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:34
+msgid ""
+"Before withdrawing money from a customer bank account, your customer has to "
+"sign a mandate. Go in :menuselection:`Accounting --> Sales --> Direct Debit "
+"Mandates` and create a new mandate."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:41
+msgid "SEPA Direct Debit only works between IBAN Bank Accounts."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:43
+msgid ""
+"Once you have entered all the information in the customer mandate, you can "
+"print it and ask your customer to sign it. Once it is done, you can upload "
+"the mandate signed by your customer on the mandate in Odoo."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:50
+msgid "You can now validate the mandate."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:55
+msgid "Let's create an invoice for that customer."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:57
+msgid ""
+"When you will validate this invoice, the payment will be automatically "
+"generated and your invoice will be directly marked as paid."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:61
+msgid ""
+"If you already had some invoices for that customer that could be paid using "
+"that mandate, it's still possible to do it. Go on the invoice, click on "
+"register payment and choose the Sepa Direct Debit as payment method."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:67
+msgid "Generate SDD Files"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:69
+msgid ""
+"You can generate the SDD File with all the customer payments to send to your"
+" bank directly from the accounting dashboard :"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:75
+msgid ""
+"You select the payments in the list that you want to include in your SDD "
+"File, click on action and select \"Generate Direct Debit XML\"."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:81
+msgid ""
+"You can now download the XML file generated by Odoo and upload it in your "
+"bank interface."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:85
+msgid ""
+"You can retrieve all the generated XML by activating the developer mode and "
+"going in :menuselection:`Accounting --> Configuration --> Payments --> SDD "
+"Payment File`."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:89
+msgid "Close or revoke a mandate"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:91
+msgid ""
+"The Direct Debit mandate will be closed automatically once the end date "
+"defined on it is reached. However, you can **close** a mandate earlier than "
+"initially planned. To do that, simply go on the mandate and click on the "
+"\"Close\" button.The end date of the mandate will be updated to today's "
+"date. This means you will not be able to pay invoices with an invoice date "
+"superior to this end date. Be careful, once a mandate is closed, it cannot "
+"be reopened."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:99
+msgid ""
+"You can also **revoke** a mandate. In that case, you won't be able to pay "
+"any invoice using that mandate anymore, no matter the invoice date.To do "
+"that, simply go on the mandate and click on the \"Revoke\" button."
+msgstr ""
+
 #: ../../accounting/receivables/customer_payments/recording.rst:3
 msgid "What are the different ways to record a payment?"
 msgstr "有哪些不同的方式来记录付款？"
@@ -11694,316 +13053,3 @@ msgstr "内部银行转款，在仪表板上选择转出的银行，并在付款
 #: ../../accounting/receivables/customer_payments/recording.rst:127
 msgid ":doc:`credit_cards`"
 msgstr ":doc:`credit_cards` "
-
-#: ../../accounting/receivables/getting_paid.rst:3
-msgid "How to get paid?"
-msgstr "如何收款？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:3
-msgid "How to automate customer follow-ups with plans?"
-msgstr "如何自动有计划地跟进客户？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:5
-msgid ""
-"With the Odoo Accounting application, you get a dynamic aged receivable "
-"report, customer statements and you can easily send them to customers."
-msgstr "在会计应用，你会得到一个动态的应收款报表，客户对账表，可发送给客户。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:8
-msgid ""
-"If you want to go further in the automation of the credit collection "
-"process, you can use follow-up plans. They will help you automate all the "
-"steps to get paid, by triggering them at the right time: send customer "
-"statements by emails, send regular letter (through the Docsaway "
-"integration), create a task to manually call the customer, etc..."
-msgstr ""
-"如果你想进一步自动化信用收集，可使用跟踪计划。他们会帮助你自动完成收款所有的步骤：将客户对账单电子邮件给客户，定期发封信(通过docsaway集成)，创建一个任务，手动打电话给客户，等等..."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:14
-msgid "Here is an example of a plan:"
-msgstr "这里是一项计划的例子 :"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "When?"
-msgstr "何时？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "What?"
-msgstr "什么？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "Who?"
-msgstr "谁？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-msgid "3 days before due date"
-msgstr "3天后过期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-msgid "Email"
-msgstr "电子邮箱"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "automated"
-msgstr "自动的"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "1 day after due date"
-msgstr "1 天后过期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "Email + Regular Letter"
-msgstr "电子邮件 + 定期信件"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-msgid "15 days after due date"
-msgstr "15 天后过期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-msgid "Call the customer"
-msgstr "致电客户"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "John Mac Gregor"
-msgstr "John Mac Gregor"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "35 days after due date"
-msgstr "35天后过期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "Email + Letter + Call"
-msgstr "电子邮件 + 信件 + 电话"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "60 days after due date"
-msgstr "60 天后过期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "Formal notice"
-msgstr "正式通知"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "Bailiff"
-msgstr "Bailiff"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:34
-msgid "Install Reminder Module"
-msgstr "安装提醒模块"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:36
-msgid ""
-"You must start by activating the feature, using the menu "
-":menuselection:`Configuration --> Settings` of the Accounting application. "
-"From the settings screen, activate the feature **Enable payment follow-up "
-"management**."
-msgstr ""
-"你必须先激活功能，使用菜单 :menuselection:`Configuration --> Settings` .  "
-"从设置界面，激活功能**Enable payment follow-up management**."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:44
-msgid "Define Payment Follow-ups Levels"
-msgstr "定义付款追踪等级"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:46
-msgid ""
-"To automate customer follow ups, you must configure your follow–up levels "
-"using the menu :menuselection:`Accounting --> Configuration --> Payment "
-"Follow-ups`. You should define one and only one follow-up plan per company."
-msgstr ""
-"自动化的跟进客户，必须配置, 菜单:`Accounting --> Configuration --> Payment Follow-ups`. "
-"你应该定义一个公司，每个公司只有一个跟进计划。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:50
-msgid ""
-"The levels of follow-up are relative to the due date; when no payment term "
-"is specified, the invoice date will be considered as the due date."
-msgstr "跟进关联到期日；当没有付款条款时，发票日期将视为到期日。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:53
-msgid ""
-"For each level, you should define the number of days and create a note which"
-" will automatically be added into the reminder letter."
-msgstr "对于每一个级别，应定义天数，并创建一个将自动添加到提醒函中的说明。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:59
-msgid "Odoo defines several actions for every reminder:"
-msgstr "Odoo为每个提醒定义了几个行动 :"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:61
-msgid ""
-"**Manual Action:** assign a responsible that will have to call the customer"
-msgstr "* *手动操作：**指定一个电话给客户的负责人"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:62
-msgid "**Send an Email:** send an email to customer using the provided text"
-msgstr " **发送一个邮件 :** 使用所提供的文本发送一封电子邮件给客户"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:63
-msgid ""
-"**Send a Letter:** send a letter by regular mail, using the provided note"
-msgstr " **发送一个信件 :** 使用提供的备注, 通过定期邮件发送一个信件"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:69
-msgid ""
-"As you need to provide a number of days relative to the due date, you can "
-"use a negative number. As an example, if an invoice is issued the January "
-"1st but the due date is January 20, if you set a reminder 3 days before the "
-"due date, the customer may receive an email in January 17."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:76
-msgid "Doing your weekly follow-ups"
-msgstr "每周做的跟进工作"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:78
-msgid ""
-"Once everything is setup, Odoo will prepare follow-up letters and emails "
-"automatically for you. All you have to do is to the menu "
-":menuselection:`Sales --> Customers Statement` in the accounting "
-"application."
-msgstr ""
-"一旦一切设置好，Odoo将自动发送跟进信件和邮件。必须的设置, 在菜单:menuselection:`Sales --> Customers "
-"Statement`."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:85
-msgid ""
-"Odoo will automatically propose you actions based on the follow-up plan you "
-"defined, invoices to pay and payment received."
-msgstr "Odoo会基于定义的跟踪计划自动建议后续行动，收支款项。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:88
-msgid ""
-"You can use this menu every day, once a week or once a month. You do not "
-"risk to send two times the same reminder to your customer. Odoo only "
-"proposes you the action you have to do. If you do it every day, you will "
-"have a few calls to do per day. If you do it once a month, you will have "
-"much more work once you do it."
-msgstr ""
-"你可每天，每周或每月一次使用这个菜单。你不用担心发送多次提醒给客户。Odoo只会提醒必做的工作。如果你每天都这样做，你每天都会有几个电话。如果你一个月做一次，工作会囤积得比较多。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:94
-msgid ""
-"It's up to you to organize the way you want to work. But it's a good "
-"practice to reconcile your bank statements before launching the follow-ups. "
-"That way, all paid invoices will be reconciled and you will not send a "
-"follow-up letter to a customer that already paid his invoice."
-msgstr "由你来决定工作的方式。但运行跟踪行动前, 请先将银行对账单核销。这样，所有的支付发票将被核销，以免给已付款的客户发送催款信。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:99
-msgid "From a customer follow-up proposition, you can:"
-msgstr "通过客户跟进提议, 你可以:"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:101
-msgid "Get the customer information to contact him"
-msgstr "取得客户的联系方式并联系他"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:103
-msgid "Drill down to the customer information form by clicking on its name"
-msgstr "点击名字，下拉客户信息表"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:105
-msgid "Change the text (or the email or letter) and adapt to the customer"
-msgstr "更改文本(或电子邮件或信)使之适应客户"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:107
-msgid ""
-"Change the colored dot to mark the customer as being a good, normal or bad "
-"debtor"
-msgstr "更改彩色点标记客户为好、一般或差债务人"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:110
-msgid "Log a note is you called the customer"
-msgstr "将你联系过客户的相关信息记录一下"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:112
-msgid "Exclude some invoices from the statement table (litigation)"
-msgstr "对账单不含这些发票(诉讼)"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:114
-msgid "Send an email with the statement"
-msgstr "发送一份账单邮件"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:116
-msgid ""
-"Print a letter, or send a regular mail (if you installed the Docsaway "
-"integration)"
-msgstr "打印一封信, 或发送定期邮件 (如果您安装了 Docsaway 集成)"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:119
-msgid ""
-"Plan the next reminder (but it's better to keep in automatic mode so that "
-"Odoo will stick to the follow-up plan of the company)"
-msgstr "计划下次提醒(但最好在自动模式下，Odoo将自动进行公司的跟踪计划)"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:122
-msgid "Drill down to an invoice"
-msgstr "深入一张发票"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:124
-msgid ""
-"Change the expected payment date of an invoice (thus, impacting the next "
-"time Odoo will propose you to send a reminder)"
-msgstr "更改发票的预期的付款日期 (因此, 影响下一次 Odoo 建议您发送提醒的时间)"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:128
-msgid ""
-"You can force a customer statement, even if Odoo do not proposes you to do "
-"it, because it's not the right date yet. To do this, you should go to the "
-"Aged Receivable report (in the report menu of the Accounting application). "
-"From this report, you can click on a customer to get to his customer "
-"statement."
-msgstr ""
-"你可以查看客户对账单，即使Odoo因为未到日期没有建议你这样做。要做到这一点，去应收账龄表(在会计应用程序下的报表菜单)。从这份报告中，你可以点击一个客户,"
-" 可看到客户对账单。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:135
-msgid "How to exclude an invoice from auto follow up?"
-msgstr "如何从自动催款里面排除发票？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:137
-msgid "To see all **overdue invoices** or **on need of action**,"
-msgstr "查看所有 **逾期发票** 或 **需要的行动** "
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:139
-msgid "Go to :menuselection:`Accounting --> Sales --> Customers Statement`"
-msgstr ""
-"转到 :menuselection:`会计(Accounting) -->销售(Sales) -->客户对账单(Customers "
-"Statement)` "
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:145
-msgid "Exclude a specific invoice for a specific date"
-msgstr "排除特定日期的特定日期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:147
-msgid ""
-"Odoo can exclude an invoice from follow-ups actions for specific date by "
-"clicking on **Log a Note**, then choose one of the ready options (*one "
-"week*, *two weeks*, *one month*, *two months*), So Odoo will calculate the "
-"required date according to the current date."
-msgstr ""
-"点击**Log a Note**, 在跟踪计划时可不含这些发票，然后选择一个选项(*一周*，* "
-"两周*，*一个月*，*两个月*)，所以Odoo会根据当前日期计算所需的时间。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:155
-msgid ""
-"Another way to achieve it is the following: click on the required invoice, "
-"then choose **Change expected payment date/note**, then enter a new payment "
-"date and note."
-msgstr "另一种方法也可以实现：点击所需的发票，然后选择**更改预期的付款日期/说明**，然后输入一个新的付款日期和说明。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:162
-msgid "Exclude a specific invoice forever"
-msgstr "永久的排除特定的发票"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:164
-msgid ""
-"Odoo can exclude an invoice for a specific customer by clicking on the "
-"checkbox **Excluded**"
-msgstr "Odoo 可以为特定客户免开发票 , 通过点击复选框 **排除** "
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:168
-msgid "If you click on **History**, you can see all follow ups actions."
-msgstr "如果你点击了 **历史记录** , 你可以看到所有的后续操作。"

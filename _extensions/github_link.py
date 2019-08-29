@@ -1,7 +1,8 @@
 import inspect
 import importlib
 import os.path
-from urlparse import urlunsplit
+import werkzeug
+
 
 """
 * adds github_link(mode) context variable: provides URL (in relevant mode) of
@@ -81,7 +82,7 @@ def make_github_link(app, path, line=None, mode="blob"):
         path=path,
         mode=mode,
     )
-    return urlunsplit((
+    return werkzeug.urls.url_unparse((
         'https',
         'github.com',
         urlpath,
@@ -98,7 +99,7 @@ def add_doc_link(app, pagename, templatename, context, doctree):
     # in Sphinx 1.3 it's possible to have mutliple source suffixes and that
     # may be useful in the future
     source_suffix = app.config.source_suffix
-    source_suffix = source_suffix if isinstance(source_suffix, basestring) else source_suffix[0]
+    source_suffix = next(iter(source_suffix))
     # FIXME: odoo/odoo has a doc/ prefix which is incorrect for this
     # project, how to unify? Add new setting? 
     context['github_link'] = lambda mode='edit': make_github_link(

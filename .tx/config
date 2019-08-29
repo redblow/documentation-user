@@ -47,6 +47,11 @@ file_filter = locale/<lang>/LC_MESSAGES/getting_started.po
 source_file = locale/sources/getting_started.pot
 source_lang = en
 
+[odoo-11-doc.helpdesk]
+file_filter = locale/<lang>/LC_MESSAGES/helpdesk.po
+source_file = locale/sources/helpdesk.pot
+source_lang = en
+
 [odoo-11-doc.index]
 file_filter = locale/<lang>/LC_MESSAGES/index.po
 source_file = locale/sources/index.pot
@@ -57,14 +62,29 @@ file_filter = locale/<lang>/LC_MESSAGES/inventory.po
 source_file = locale/sources/inventory.pot
 source_lang = en
 
+[odoo-11-doc.livechat]
+file_filter = locale/<lang>/LC_MESSAGES/livechat.po
+source_file = locale/sources/livechat.pot
+source_lang = en
+
 [odoo-11-doc.manufacturing]
 file_filter = locale/<lang>/LC_MESSAGES/manufacturing.po
 source_file = locale/sources/manufacturing.pot
 source_lang = en
 
+[odoo-11-doc.mobile]
+file_filter = locale/<lang>/LC_MESSAGES/mobile.po
+source_file = locale/sources/mobile.pot
+source_lang = en
+
 [odoo-11-doc.point_of_sale]
 file_filter = locale/<lang>/LC_MESSAGES/point_of_sale.po
 source_file = locale/sources/point_of_sale.pot
+source_lang = en
+
+[odoo-11-doc.portal]
+file_filter = locale/<lang>/LC_MESSAGES/portal.po
+source_file = locale/sources/portal.pot
 source_lang = en
 
 [odoo-11-doc.practical]

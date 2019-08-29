@@ -5,5 +5,9 @@ Localizations
 .. toctree::
    :titlesonly:
 
-   localizations/switzerland
+   localizations/france
+   localizations/germany
    localizations/mexico
+   localizations/nederlands
+   localizations/spain
+   localizations/switzerland

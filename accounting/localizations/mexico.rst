@@ -1,6 +1,6 @@
-===================
-Mexico Localization
-===================
+======
+Mexico
+======
 
 .. note::
    This documentation is written assuming that you follow and know the official
@@ -29,7 +29,7 @@ accounting and invoicing system due to all the set of normal requirements for
 this market, becoming your Odoo in the perfect solution to administer your
 company in Mexico.
 
-Configuration 
+Configuration
 ~~~~~~~~~~~~~
 
 .. tip::
@@ -62,6 +62,8 @@ integrate with the normal invoicing flow in Odoo.
 .. image:: media/mexico02.png
    :align: center
 
+.. _mx-legal-info:
+
 3. Set you legal information in the company
 -------------------------------------------
 
@@ -74,7 +76,7 @@ company’s contact.
 .. tip::
    If you want use the Mexican localization on test mode, you can put any known
    address inside Mexico with all fields for the company address and
-   set the vat to **ACO560518KW7**.
+   set the vat to **TCM970625MB1**.
 
 .. image:: media/mexico03.png
    :align: center
@@ -177,6 +179,19 @@ and then enter your PAC username and PAC password.
    - `Certificate Key`_
    - **Password :** 12345678a
 
+7. Configure the tag in sales taxes
+-----------------------------------
+
+This tag is used to set the tax type code, transferred or withhold, applicable
+to the concept in the CFDI.
+So, if the tax is a sale tax the "Tag" field should be "IVA", "ISR" or "IEPS".
+
+.. image:: media/mexico33.png
+   :align: center
+
+Note that the default taxes already has a tag assigned, but when you create a
+new tax you should choose a tag.
+
 Usage and testing
 ~~~~~~~~~~~~~~~~~
 
@@ -247,14 +262,43 @@ If the invoice is not paid.
 Payments (Just available for CFDI 3.3)
 --------------------------------------
 
-To generate the payment complement you just must to follow the normal payment
+To generate the payment complement you only need to follow the normal payment
 process in Odoo, this considerations to understand the behavior are important.
 
-1. All payment done in the same day of the invoice will be considered as It
-   will not be signed, because It is the expected behavior legally required
-   for "Cash payment".
-2. To test a regular signed payment just create an invoice for the day before
-   today and then pay it today.
+1. To generate payment complement the payment term in the invoice must be
+   PPD, because It is the expected behavior legally required for
+   "Cash payment".
+
+   **1.1. How can I generate an invoice with payment term `PUE`?**
+
+   `According to the SAT documentation`_ a payment is classified as ``PUE`` if
+   the invoice was agreed to be fully payed before the 17th of the next
+   calendar month (the next month of the CFDI date), any other condition
+   will generate a ``PPD`` invoice.
+
+   **1.2. How can I get this with Odoo?**
+
+   In order to set the appropriate CFDI payment term (PPD or PUE), you can
+   easily set it by using the ``Payment Terms`` defined in the invoice.
+
+   - If an invoice is generated without ``Payment Term`` the attribute
+     ``MetodoPago`` will be ``PUE``.
+
+   - Today, if is the first day of the month and is generated an invoice with
+     ``Payment Term`` ``30 Net Days`` the ``Due Date`` calculated is going to
+     be the first day of the following month, this means its before the 17th
+     of the next month, then the attribute ``MetodoPago`` will be ``PUE``.
+
+   - Today, if an invoice is generated with ``Payment Term`` ``30 Net Days``
+     and the ``Due Date`` is higher than the day 17 of the next month the
+     ``MetodoPago`` will be ``PPD``.
+
+   - If having a ``Payment Term`` with 2 lines or more, for example
+     ``30% Advance End of Following Month``, this is an installments term,
+     then the attribute ``MetodoPago`` will be ``PPD``.
+
+2. To test a normal signed payment just create an invoice with payment term
+   ``30% Advance End of Following Month`` and then register a payment to it.
 3. You must print the payment in order to retrieve the PDF properly.
 4. Regarding the "Payments in Advance" you must create a proper invoice with
    the payment in advance itself as a product line setting the proper SAT code
@@ -488,7 +532,7 @@ debug mode enabled).
 - Click on button "Create Contextual Action"
 - Go to the company form :menuselection:`Settings --> Users&Companies --> Companies`
 - Open any company you have.
-- Click on "Action" and then on "Dowload XSD file to CFDI".
+- Click on "Action" and then on "Download XSD file to CFDI".
 
 .. image:: media/mexico18.png
    :align: center
@@ -496,6 +540,23 @@ debug mode enabled).
 Now you can make an invoice with any error (for example a product without
 code which is pretty common) and an explicit error will be shown instead a
 generic one with no explanation.
+
+.. note::
+   If you see an error like this:
+
+     The cfdi generated is not valid
+
+     attribute decl. 'TipoRelacion', attribute 'type': The QName value
+     '{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoRelacion' does
+     not resolve to a(n) simple type definition., line 36
+
+   This can be caused because of a database backup restored in anothe server,
+   or when the XSD files are not correctly downloaded. Follow the same steps
+   as above but:
+
+   - Go to the company in which the error occurs.
+   - Click on "Action" and then on "Download XSD file to CFDI".
+
 
 FAQ
 ~~~
@@ -555,8 +616,8 @@ FAQ
    **Solution:** You must set the address on your company properly, this is a
    mandatory group of fields, you can go to your company configuration on
    :menuselection:`Settings --> Users & Companies --> Companies` and fill
-   all the required fields for your address following the step `3. Set you
-   legal information in the company`.
+   all the required fields for your address following the step
+   :ref:`mx-legal-info`.
 
 - **Error message**:
 
@@ -586,11 +647,11 @@ FAQ
 .. image:: media/mexico13.png
    :align: center
 
-
 .. _SAT: http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf
-.. _Finkok: https://facturacion.finkok.com/cuentas/registrar/
+.. _Finkok: https://www.finkok.com/contacto.html
 .. _`Solución Factible`: https://solucionfactible.com/sf/v3/timbrado.jsp
 .. _`SAT resolution`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Paginas/Anexo_20_version3.3.aspx
+.. _`According to the SAT documentation`: https://www.sat.gob.mx/cs/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1461173400586&ssbinary=true
 .. _`given by the SAT`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Documents/GuiaAnexo20DPA.pdf
 .. _`Anexo 24`: http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf
 .. _`official information here`: http://www.sat.gob.mx/fichas_tematicas/declaraciones_informativas/Paginas/declaracion_informativa_terceros.aspx

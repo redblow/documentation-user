@@ -1,12 +1,5 @@
 {% extends "basic/layout.html" %}
 
-{% set script_files = script_files + [
-'_static/jquery.min.js',
-'_static/bootstrap.js',
-'_static/doc.js',
-'_static/jquery.noconflict.js',
-] %}
-
 {% set classes = [] %}
 {% if pagename == master_doc %}
   {% set classes = classes + ['index'] %}
@@ -39,6 +32,7 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', '{{ google_analytics_key }}', 'auto');
+    ga('set', 'anonymizeIp', true);
     ga('send','pageview');
     </script>
   {%- endif -%}
@@ -242,7 +236,7 @@
             </div>
           </aside>
           {% endif %}
-          <article class="doc-body {% if 'has-toc' in meta %}doc-toc{% endif %}{% if pagename in toc%}index-category{% endif %}">
+          <article class="doc-body {% if 'has-toc' in meta %}doc-toc{% endif %} {% if pagename in toc%}index-category{% endif %}">
             {% endif %}
             {% block body %} {% endblock %}
           {% if pagename != master_doc %}</article>
